@@ -1,12 +1,28 @@
 <template>
     <div class="outer">
-        <div :class="[{active: isActive}, 'inner']">
-                <transition name="loading" @afterEnter="afterEnter" @afterLeave="afterEnter">
-                    <Loader v-show="isActive" />
+        <div :class="[{active: isLoading}, 'inner']">
+
+            <!-- <component :is="currentContent"/> -->
+
+                <transition name="loading" @afterEnter="afterEnter">
+                    <Loader v-show="isLoading" />
                 </transition>
 
+                <transition name="componentFade">
+                    <AboutMe v-show="isAboutMe"></AboutMe>
+                </transition>
+
+                <transition name="componentFade">
+                    <Contact v-show="isContact"></Contact>
+                </transition>
+
+                <transition name="componentFade">
+                    <Blogs v-show="isBlogs"></Blogs>
+                </transition>
                 
-                <AboutMe v-show="showAboutMe" />
+                <transition name="componentFade">
+                    <Eshop v-show="isEshop"></Eshop>
+                </transition>
                 
         </div>
     </div>
@@ -16,21 +32,64 @@
 <script>
 import Loader from './Loader.vue'
 import AboutMe from './AboutMe.vue'
+import Contact from './Contact.vue'
+import Blogs from './projects/Blogs.vue'
+import Eshop from './projects/Eshop.vue'
 
 export default {
-    props: ['isActive'],
+    props: [],
     components: {
-        Loader, AboutMe
+        Loader, AboutMe, Contact, Blogs,Eshop
     },
     data(){
         return{
-            showAboutMe: false,
+            isLoading: false,
+            isAboutMe: false,
+            isContact: false,
+            isBlogs: false,
+            isEshop: false,
         }
     },
     methods: {
         afterEnter(){
-            this.showAboutMe = !this.showAboutMe;
-        }
+            this.isAboutMe = !this.isAboutMe;
+        },
+        
+    },
+    
+    mounted(){
+        this.emitter.on('projects', (event) => {
+            this.isAboutMe = false;
+            this.isContact = false;
+            if(event === 1){
+                this.isEshop = false;
+                this.isBlogs = !this.isBlogs;
+            }
+            if(event === 2){
+                this.isBlogs = false;
+                this.isEshop = !this.isEshop;
+            }
+
+        });
+
+        this.emitter.on('contact-coming', () => {
+            this.isAboutMe = false;
+            this.isBlogs = false;
+            this.isEshop = false;
+            this.isContact = !this.isContact;
+
+        });
+        this.emitter.on('powerOn', () => {
+            if(this.isLoading){
+                this.isLoading = false;
+                this.isAboutMe = false;
+                this.isContact = false;
+                this.isBlogs = false;
+                this.isEshop = false;
+            }else
+                this.isLoading = true;
+
+        })
     }
 }
 </script>
@@ -95,28 +154,49 @@ $border-color: #333333;
 
     
 }
-
-
-    .loading-enter-active,
-    .loading-leave-active {
-        transition: opacity 2s ease, transform 2s ease;
+    .loading-enter-active{
+        display: flex;
+        // transform: scale(1.5);
+        // transition: opacity 3s ease, transform 3s ease;
+        animation: loading 3s 1s ease;
     }
 
-    .loading-enter-from,
-    .loading-leave-to {
+    .loading-enter-from{
         opacity: 0;
         transform: scale(0);
     }
 
-    .loading-enter-active{
-        display: flex;
-        transform: scale(1.5);
+    .componentFade-enter-active {
+        animation: componentFade 3s forwards;
     }
 
-    // .loading-leave-active{
-    //     display: flex;
-    // }
-    
+    .componentFade-leave-active {
+        opacity: 0;
+        transform: scale(0);
+    }
+    .componentFade-leave-from {
+        opacity: 0;
+        transform: scale(0);
+    }
 
-
+    @keyframes componentFade {
+        from {
+            opacity: 0;
+        }
+        
+        to{
+            opacity: 1;
+        }
+    }
+    @keyframes loading {
+        from {
+            opacity: 0;
+            transform: scale(0);
+        }
+        
+        to{
+            opacity: 1;
+            transform: scale(1.5);
+        }
+    }
 </style>

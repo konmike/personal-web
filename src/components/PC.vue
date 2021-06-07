@@ -1,7 +1,7 @@
 <template>
-    <main class="main-content">
-        <Monitor :isActive=isActive />
-        <Box @powerOn="isActive = !isActive" />
+    <main :class="[{'active': powerOn}, 'main-content']">
+        <Monitor />
+        <Box />
     </main>
 </template>
 
@@ -10,14 +10,21 @@ import Monitor from './Monitor.vue'
 import Box from './Box.vue'
 
 export default {
+    props: ['showProject', 'is-contact'],
     components: {
         Monitor, Box
     },
     data (){
         return{
-            isActive: false,
+            powerOn: false,
         }
-    }     
+    },
+    mounted() {
+        this.emitter.on('powerOn', () => {
+            this.powerOn = !this.powerOn;
+        })
+    }
+
 }
 </script>
 
@@ -27,7 +34,13 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // max-width: 70%;
+    width: 70%;
+    max-width: 70%;
     box-sizing: border-box;
+    transition: width 1000ms;
+}
+.active{
+    width: 70%;
+    max-width: 70%;
 }
 </style>

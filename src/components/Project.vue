@@ -1,5 +1,7 @@
 <template>
-    <div :class="[{active: isActive }, 'floppy-disk']" :style="{zIndex: zI, marginBottom: mB, width: size + 'px', height: size + 'px'}">
+    <div :class="[{active: isActive }, 'floppy-disk']" 
+          
+         :style="{zIndex: zI, marginBottom: mB + 'rem',}">
         <div class="content">
             <span class="row">{{name}}</span>
             <span class="row">{{description}}</span>
@@ -14,17 +16,14 @@
 <script>
     
     export default {
-        props: ['name', 'description', 'zI', 'mB','size'],
+        props: ['name', 'description', 'zI', 'mB','isActive'],
         data (){
             return{
                 counter: 0,
-                isActive: false,
             }
         },
         methods: {
-            mouseOver () {
-                this.active = !this.active;   
-            }
+            
         }  
     }
 </script>
@@ -37,7 +36,8 @@ $border-color: #333333;
     border-radius: 5px;
     border-bottom-left-radius: 30px;
     box-shadow: -5px 8px 10px #333333;
-    
+    height: 200px;
+    width: 200px;
     position: absolute;
     background-color: #fff;
     display: flex;
@@ -49,8 +49,12 @@ $border-color: #333333;
     transition: all 250ms;
 
     &:hover{
-        transform: scale(1.2) translateY(-2rem);
+        transform: scale(1.2) translate(2rem, -1rem);
         z-index: 20 !important;
+    }
+    &.active{
+        transform: scale(1.2) translate(2rem, -1rem);
+        z-index: 19;
     }
 
     // &::after{
@@ -74,10 +78,10 @@ $border-color: #333333;
     // }
 }
 
-.active{    
-    // transform: scale(1);
-    transform: translateY(-2rem);
-}
+// .active{    
+//     // transform: scale(1);
+//     transform: translateY(-2rem);
+// }
 
 .content{
     border: 4px solid $border-color;
