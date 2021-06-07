@@ -1,5 +1,5 @@
 <template>
-    <div class="blogs">
+    <div class="blogs project-content">
         <h1>Wordpress</h1>
         <ul>
             <li>tvorba vlastní šablony</li>
@@ -29,7 +29,7 @@
 </script>
 
 <style lang="scss" scoped>
-.blogs{
+.project-content{
     color: #fff;
     font-family: 'Press Start 2P';
     ul{

@@ -7,7 +7,7 @@
                 <transition name="loading" @afterEnter="afterEnter">
                     <Loader v-show="isLoading" />
                 </transition>
-                
+
                 <transition name="componentFade">
                     <component :is="currentProject" v-show="isProject"/>
                 </transition>
@@ -22,11 +22,12 @@ import AboutMe from './AboutMe.vue'
 import Contact from './Contact.vue'
 import Blogs from './projects/Blogs.vue'
 import Eshop from './projects/Eshop.vue'
+import Redesign from './projects/Redesign.vue'
 
 export default {
     props: [],
     components: {
-        Loader, AboutMe, Contact, Blogs,Eshop
+        Loader, AboutMe, Contact, Blogs,Eshop,Redesign
     },
     data(){
         return{
@@ -44,12 +45,15 @@ export default {
     
     mounted(){
         this.emitter.on('projects', (event) => {
-            if(event === 1){
+            if(event === 1)
                 this.currentProject = 'Blogs';
-            }
-            if(event === 2){
+            if(event === 2)
                 this.currentProject = 'Eshop';
-            }
+            if(event === 3)
+                this.currentProject = 'Redesign';
+            if(event === 4)
+                this.currentProject = 'Evidence';
+            
 
         });
 
