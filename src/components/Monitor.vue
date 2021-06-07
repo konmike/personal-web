@@ -2,28 +2,15 @@
     <div class="outer">
         <div :class="[{active: isLoading}, 'inner']">
 
-            <!-- <component :is="currentContent"/> -->
+           
 
                 <transition name="loading" @afterEnter="afterEnter">
                     <Loader v-show="isLoading" />
                 </transition>
-
-                <transition name="componentFade">
-                    <AboutMe v-show="isAboutMe"></AboutMe>
-                </transition>
-
-                <transition name="componentFade">
-                    <Contact v-show="isContact"></Contact>
-                </transition>
-
-                <transition name="componentFade">
-                    <Blogs v-show="isBlogs"></Blogs>
-                </transition>
                 
                 <transition name="componentFade">
-                    <Eshop v-show="isEshop"></Eshop>
+                    <component :is="currentProject" v-show="isProject"/>
                 </transition>
-                
         </div>
     </div>
     <div class="bottom"></div>
@@ -44,48 +31,36 @@ export default {
     data(){
         return{
             isLoading: false,
-            isAboutMe: false,
-            isContact: false,
-            isBlogs: false,
-            isEshop: false,
+            isProject: false,
+            currentProject: 'AboutMe',
         }
     },
     methods: {
         afterEnter(){
-            this.isAboutMe = !this.isAboutMe;
+            this.isProject = !this.isProject;
         },
         
     },
     
     mounted(){
         this.emitter.on('projects', (event) => {
-            this.isAboutMe = false;
-            this.isContact = false;
             if(event === 1){
-                this.isEshop = false;
-                this.isBlogs = !this.isBlogs;
+                this.currentProject = 'Blogs';
             }
             if(event === 2){
-                this.isBlogs = false;
-                this.isEshop = !this.isEshop;
+                this.currentProject = 'Eshop';
             }
 
         });
 
         this.emitter.on('contact-coming', () => {
-            this.isAboutMe = false;
-            this.isBlogs = false;
-            this.isEshop = false;
-            this.isContact = !this.isContact;
-
+            this.currentProject = 'Contact';
         });
         this.emitter.on('powerOn', () => {
             if(this.isLoading){
                 this.isLoading = false;
-                this.isAboutMe = false;
-                this.isContact = false;
-                this.isBlogs = false;
-                this.isEshop = false;
+                this.isProject = false;
+                this.currentProject = 'AboutMe';
             }else
                 this.isLoading = true;
 
