@@ -56,32 +56,7 @@ $border-color: #333333;
         transform: scale(1.2) translate(2rem, -1rem);
         z-index: 19;
     }
-
-    // &::after{
-    //     width: 24px;
-    //     height: 28px;
-    //     display: inline-block;
-    //     position: absolute;
-    //     bottom: -6px;
-    //     left: -18px;
-    //     background: #fff;
-    //     content: "";
-    //     border-right: 6px solid $border-color;
-    //     /* border: 6px solid red; */
-    //     right: -1em;
-    //     z-index: -1;
-    //     transform: skewX( 40deg );
-    //     -ms-transform: skewX(40deg);
-    //     -moz-transform: skewX(40deg);
-    //     -webkit-transform: skewX( 40deg );
-    //     -o-transform: skewX(40deg);
-    // }
 }
-
-// .active{    
-//     // transform: scale(1);
-//     transform: translateY(-2rem);
-// }
 
 .content{
     border: 4px solid $border-color;

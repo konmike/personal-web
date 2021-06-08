@@ -1,8 +1,6 @@
 <template>
     <div class="outer">
-        <div :class="[{active: isLoading}, 'inner']">
-
-           
+        <div :class="[{active: isOn}, 'inner']">
 
                 <transition name="loading" @afterEnter="afterEnter">
                     <Loader v-show="isLoading" />
@@ -11,6 +9,7 @@
                 <transition name="componentFade">
                     <component :is="currentProject" v-show="isProject"/>
                 </transition>
+
         </div>
     </div>
     <div class="bottom"></div>
@@ -23,50 +22,111 @@ import Contact from './Contact.vue'
 import Blogs from './projects/Blogs.vue'
 import Eshop from './projects/Eshop.vue'
 import Redesign from './projects/Redesign.vue'
+import Evidence from './projects/Evidence.vue'
+import Calendar from './projects/Calendar.vue'
+import Drupal from './projects/Drupal.vue'
 
 export default {
     props: [],
     components: {
-        Loader, AboutMe, Contact, Blogs,Eshop,Redesign
+        Loader, AboutMe, Contact, Blogs,Eshop,Redesign, Evidence, Calendar, Drupal
     },
     data(){
         return{
             isLoading: false,
             isProject: false,
+            isOn: false,
             currentProject: 'AboutMe',
+            projects: [
+                { id: -1, name: 'AboutMe', },
+                { id: 0, name: 'Contact', },
+                { id: 1, name: 'Blogs', },
+                { id: 2, name: 'Eshop', },
+                { id: 3, name: 'Redesign', },
+                { id: 4, name: 'Evidence', },
+                { id: 5, name: 'Calendar', },
+                { id: 6, name: 'Drupal', },
+            ]
         }
     },
     methods: {
         afterEnter(){
             this.isProject = !this.isProject;
+            this.isLoading = false;
         },
+        setNewActiveWindow(newWindow){
+            if(newWindow === this.currentProject){
+                this.isProject = !this.isProject;
+                return false
+            }
+            
+            this.currentProject = newWindow;
+            return true;
+            
+        },
+        isNotProjectOn(){
+            return this.currentProject === 'Contact' ||
+                   this.currentProject === 'AboutMe';
+                   
+        },
+        isEmpty(){
+            return !this.isProject;
+        },
+        isTheSame(name){
+            return this.currentProject === name;
+        }
         
     },
     
     mounted(){
         this.emitter.on('projects', (event) => {
-            if(event === 1)
-                this.currentProject = 'Blogs';
-            if(event === 2)
-                this.currentProject = 'Eshop';
-            if(event === 3)
-                this.currentProject = 'Redesign';
-            if(event === 4)
-                this.currentProject = 'Evidence';
             
+            var getName = this.projects.find(obj => {
+                return obj.id === event
+            })
+            // console.log(getName.name);
+            let em = this.isEmpty();
+            let nPro = this.isNotProjectOn();
+            let eq = this.isTheSame(getName.name);
+            let res = this.setNewActiveWindow(getName.name);
+            
+            console.log('Souc: ' + this.currentProject);
+            console.log('Klik: ' + getName.name);
+            console.log('Eq: ' + eq);
+
+            if(em || nPro)
+                this.emitter.emit('floppy', 1);
+            else if(!em && !nPro && !eq)
+                this.emitter.emit('floppy', 2)
+            else
+                this.emitter.emit('floppy', 0)
+
+            this.isProject = false;
+            if(res)
+                this.isLoading = true;
 
         });
 
         this.emitter.on('contact-coming', () => {
-            this.currentProject = 'Contact';
+            // this.currentProject = 'Contact';
+            if(this.currentProject !== 'AboutMe')
+                this.emitter.emit('floppy', 0);
+
+            this.setNewActiveWindow('Contact');
+
         });
-        this.emitter.on('powerOn', () => {
-            if(this.isLoading){
+        this.emitter.on('powerOn', (event) => {
+            if(event){
+                if(this.currentProject !== 'AboutMe' || this.currentProject !== 'Contact')
+                    this.emitter.emit('floppy', 0);
                 this.isLoading = false;
                 this.isProject = false;
+                this.isOn = false;
                 this.currentProject = 'AboutMe';
-            }else
+            }else{
                 this.isLoading = true;
+                this.isOn = true;
+            }
 
         })
     }
@@ -137,7 +197,7 @@ $border-color: #333333;
         display: flex;
         // transform: scale(1.5);
         // transition: opacity 3s ease, transform 3s ease;
-        animation: loading 3s 1s ease;
+        animation: loading 2s 1s ease;
     }
 
     .loading-enter-from{
@@ -146,7 +206,7 @@ $border-color: #333333;
     }
 
     .componentFade-enter-active {
-        animation: componentFade 3s forwards;
+        animation: componentFade 2s forwards;
     }
 
     .componentFade-leave-active {
@@ -175,7 +235,7 @@ $border-color: #333333;
         
         to{
             opacity: 1;
-            transform: scale(1.5);
+            transform: scale(2.5);
         }
     }
 </style>

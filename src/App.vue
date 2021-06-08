@@ -14,7 +14,7 @@
   
   <PC />
 
-  <button :class="[{'show': isShow}, 'contact-button']"  @click="contactOn">Kontakt</button>
+  <button :class="[{'show': isShow}, {'active': contactShow}, 'contact-button']"  @click="contactOn">Kontakt</button>
   
 </template>
 
@@ -72,7 +72,7 @@ export default {
         },
         {
           id: 6,
-          title: 'Správa webu',
+          title: 'PF UK',
           description: 'Drupal',
           zI: 5,
           mB: 20,
@@ -80,6 +80,7 @@ export default {
         },
       ],
       isShow: false,
+      contactShow: false,
       currentActive: 0,
     }
     
@@ -98,6 +99,7 @@ export default {
       contactOn(){
         this.emitter.emit('contact-coming','')
         this.closeActiveProject();
+        this.contactShow = !this.contactShow;
       },
       checkActive(id){
         // console.log(id);
@@ -114,7 +116,9 @@ export default {
         })
         getNewActive.isActive = !getNewActive.isActive;
 
-        this.emitter.emit('projects', id)
+        this.emitter.emit('projects', id);
+        if(this.contactShow)
+          this.contactShow = false;
       }
   },
   mounted() {
@@ -167,7 +171,7 @@ body{
   &.show{
     left: 0;
     margin-right: 0;
-    transition: all 1000ms 6s;
+    transition: all 1000ms 4s;
   }
 }
 .contact-button{
@@ -186,14 +190,38 @@ body{
     transition: right 1000ms 0s, color 250ms;
     text-decoration: underline;
 
-    &:hover{
+    &:hover, &.active{
       color: #2c3e50;
       text-decoration: none;
     }
     &.show{
       right: 0;
-      transition: right 1000ms 6s;
+      transition: right 1000ms 4s;
     }
+}
+
+.project-content{
+    color: #fff;
+    font-family: 'Press Start 2P';
+    ul{
+        text-align: left;
+        li{
+            margin-bottom: 0.5rem;
+            line-height: 1.5rem;
+        }
+    }
+}
+.link{
+    color: #fff;
+    transition: all 250ms;
+    
+    &:hover{
+        color: yellow;
+        text-decoration: none;
+    }
+}
+.svg-inline--fa{
+    width: 60px;
 }
 
 // .button-enter-from{
