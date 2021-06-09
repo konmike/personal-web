@@ -30,23 +30,8 @@
 
 <style lang="scss" scoped>
 .project-content{
-    color: #fff;
-    font-family: 'Press Start 2P';
     ul{
-        text-align: left;
-        li{
-            margin-bottom: 0.5rem;
-            line-height: 1.5rem;
-        }
-    }
-}
-.link{
-    color: #fff;
-    transition: all 250ms;
-    
-    &:hover{
-        color: yellow;
-        text-decoration: none;
+        margin-top: 0;        
     }
 }
 .links{
@@ -56,12 +41,15 @@
     justify-content: center;
     column-gap: 1.5rem;
     color: #fff;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 
     .link{
         &:first-child{
             grid-row: 1/1;
             text-align: left;
+        }
+        &:first-child, &:nth-child(2){
+            font-size: 0.7rem;
         }
         // margin-bottom: 1rem;
         &:nth-child(3){

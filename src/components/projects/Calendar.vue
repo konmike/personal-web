@@ -1,6 +1,6 @@
 <template>
     <div class="project-content">
-        <h1>Aplikace na tvorbu kalendáře</h1>
+        <h1>Aplikace na <br/>tvorbu kalendáře</h1>
         <ul>
             <li>bakalářská práce</li>
             <li>teoretická část, včetně ohodnocení, je veřejně přístupná <a href="https://dspace.cvut.cz/handle/10467/88331" class="link">zde</a></li>
@@ -22,15 +22,18 @@
 </script>
 
 <style lang="scss" scoped>
+.project-content ul{
+    margin-top: 0;
+}
 h1{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 2.7rem;
 }
 .links{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 0rem;
     .link{
         &:first-child{
             margin-right: 2rem;

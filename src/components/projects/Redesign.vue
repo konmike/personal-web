@@ -25,38 +25,19 @@
 </script>
 
 <style lang="scss" scoped>
-.project-content{
-    color: #fff;
-    font-family: 'Press Start 2P';
-    ul{
-        text-align: left;
-        li{
-            margin-bottom: 0.5rem;
-            line-height: 1.5rem;
-        }
-    }
-}
-.link{
-    color: #fff;
-    transition: all 250ms;
-    
-    &:hover{
-        color: yellow;
-        text-decoration: none;
-    }
+.project-content ul{
+    margin-top: 0.5rem;
 }
 .links{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1.5rem;
+    margin-top: 0rem;
     .link{
         &:first-child{
             margin-right: 2rem;
+            font-size: 0.7rem;
         }
     }
-}
-.svg-inline--fa{
-    width: 60px;
 }
 </style>

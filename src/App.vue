@@ -1,6 +1,7 @@
 <template>
   
   <aside :class="[{'show': isShow}, 'projects']">
+    <button class="button-controls down" @click="scrollUp" :disabled="top === 0"><i class="fas fa-angle-double-down"></i></button>
     <Project v-for="(project) in projects" 
             :key="project"
             :name="project.title"
@@ -10,6 +11,7 @@
             :isActive="project.isActive"
             @click="checkActive(project.id)"
     />
+    <button class="button-controls up" @click="scrollDown" :disabled="top === 150"><i class="fas fa-angle-double-up"></i></button>
   </aside>
   
   <PC />
@@ -32,7 +34,7 @@ export default {
       projects: [
         {
           id: 1,
-          title: 'Blog',
+          title: 'Blogy',
           description: 'Wordpress',
           zI: 10,
           mB: 0,
@@ -78,14 +80,51 @@ export default {
           mB: 20,
           isActive: false,
         },
+        {
+          id: 7,
+          title: 'Converter',
+          description: 'PHP, JS',
+          zI: 4,
+          mB: 24,
+          isActive: false,
+        },
+        {
+          id: 8,
+          title: 'Osobní web',
+          description: 'Vue.js',
+          zI: 3,
+          mB: 28,
+          isActive: false,
+        },
       ],
       isShow: false,
       contactShow: false,
       currentActive: 0,
+      top: 0,
     }
     
   },
   methods: {
+    changeButtonsTop(val){
+      let buttons = document.querySelectorAll('.button-controls');
+      buttons[0].style.top = val + '%';
+      buttons[1].style.top = val + '%';
+      
+    },
+      scrollDown(){
+        let as = document.querySelector('.projects');
+        as.style.top = '20%';
+        this.changeButtonsTop(30);
+        this.top = 150;
+        
+      },
+      scrollUp(){
+        let check = document.querySelector('.projects');
+        check.style.top = '0';
+        this.changeButtonsTop(50);
+        this.top = 0
+      },
+
       closeActiveProject(){
         if(this.currentActive != 0){
           var getActive = this.projects.find(obj => {
@@ -123,9 +162,9 @@ export default {
   },
   mounted() {
       this.emitter.on('powerOn', () => {
-      this.isShow = !this.isShow;
-      this.closeActiveProject();     
-    })
+        this.isShow = !this.isShow;
+        this.closeActiveProject();     
+      })
   }
 }
 // This starter template is using Vue 3 experimental <script setup> SFCs
@@ -166,12 +205,12 @@ body{
   align-items: center;
   padding: 2rem 0;
   box-sizing: border-box;
-  transition: all 1000ms 0s;
+  transition: left 1000ms 0s, margin-right 1000ms 0s, top 250ms;
 
   &.show{
     left: 0;
     margin-right: 0;
-    transition: all 1000ms 4s;
+    transition: left 1000ms 4s, margin-right 1000ms 4s, top 250ms;
   }
 }
 .contact-button{
@@ -203,6 +242,11 @@ body{
 .project-content{
     color: #fff;
     font-family: 'Press Start 2P';
+    display: flex;
+    flex-direction: column;
+    max-height: 350px;
+    overflow: hidden;
+    overflow-y: auto;
     ul{
         text-align: left;
         li{
@@ -222,6 +266,39 @@ body{
 }
 .svg-inline--fa{
     width: 60px;
+}
+
+.button-controls{
+  position: absolute;
+  top: 50%;
+  border: 0;
+  background: transparent;
+  font-size: 2rem;
+  color: #afafaf;
+  cursor: pointer;
+  transition: font-size 250ms, top 250ms;
+  
+
+  &:disabled{
+    color: #e0e0e0;
+    &:hover{
+      font-size: 2rem;
+      color: #e0e0e0;
+    }
+  }
+
+  &:hover{
+    font-size: 2.5rem;
+    color: #2c3e50;
+  }
+}
+.up{
+  right: 0;
+  margin-right: 1rem;
+}
+.down{
+  left: 0;
+  margin-left: 1rem;
 }
 
 // .button-enter-from{

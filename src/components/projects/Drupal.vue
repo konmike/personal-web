@@ -1,6 +1,6 @@
 <template>
     <div class="project-content">
-        <h1>Správa aplikací na PF UK</h1>
+        <h1>Správa aplikací <br/>na PF UK</h1>
         <ul>
             <li>úpravy šablony a správa obsahu
                 webu <a class="link" href="https://prf.cuni.cz">prf.cuni.cz</a></li>
@@ -23,9 +23,12 @@
 </script>
 
 <style lang="scss" scoped>
+.project-content ul{
+    margin-top: 0;
+}
 h1{
     padding: 0 0.5rem;
     line-height: 2.7rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 </style>

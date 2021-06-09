@@ -25,11 +25,12 @@ import Redesign from './projects/Redesign.vue'
 import Evidence from './projects/Evidence.vue'
 import Calendar from './projects/Calendar.vue'
 import Drupal from './projects/Drupal.vue'
+import Converter from './projects/Converter.vue'
 
 export default {
     props: [],
     components: {
-        Loader, AboutMe, Contact, Blogs,Eshop,Redesign, Evidence, Calendar, Drupal
+        Loader, AboutMe, Contact, Blogs,Eshop,Redesign, Evidence, Calendar, Drupal, Converter
     },
     data(){
         return{
@@ -46,6 +47,7 @@ export default {
                 { id: 4, name: 'Evidence', },
                 { id: 5, name: 'Calendar', },
                 { id: 6, name: 'Drupal', },
+                { id: 7, name: 'Converter', },
             ]
         }
     },
@@ -102,7 +104,7 @@ export default {
                 this.emitter.emit('floppy', 0)
 
             this.isProject = false;
-            if(res)
+            if(res || !res && em)
                 this.isLoading = true;
 
         });
