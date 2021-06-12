@@ -1,7 +1,7 @@
 <template>
   
   <aside :class="[{'show': isShow}, 'projects']">
-    <button class="button-controls down" @click="scrollUp" :disabled="top === 0"><i class="fas fa-angle-double-down"></i></button>
+    <button class="button-controls down" @click="changeTopOfProjects(0, 50)" :disabled="top === 0"><i class="fas fa-angle-double-down"></i></button>
     <Project v-for="(project) in projects" 
             :key="project"
             :name="project.title"
@@ -11,7 +11,7 @@
             :isActive="project.isActive"
             @click="checkActive(project.id)"
     />
-    <button class="button-controls up" @click="scrollDown" :disabled="top === 150"><i class="fas fa-angle-double-up"></i></button>
+    <button class="button-controls up" @click="changeTopOfProjects(20, 30)" :disabled="top === 150"><i class="fas fa-angle-double-up"></i></button>
   </aside>
   
   <PC />
@@ -108,40 +108,29 @@ export default {
     
   },
   methods: {
-    hola(e){
-      console.log('heelo')
-      console.log(e.keyCode)
-    },
     changeButtonsTop(val){
       let buttons = document.querySelectorAll('.button-controls');
       buttons[0].style.top = val + '%';
       buttons[1].style.top = val + '%';
       
     },
-      scrollDown(){
-        let as = document.querySelector('.projects');
-        as.style.top = '20%';
-        this.changeButtonsTop(30);
-        this.top = 150;
-        
-      },
-      scrollUp(){
-        let check = document.querySelector('.projects');
-        check.style.top = '0';
-        this.changeButtonsTop(50);
-        this.top = 0
-      },
+    changeTopOfProjects(topP, topB){
+      let aside = document.querySelector('.projects');
+      aside.style.top = topP + '%';
+      this.changeButtonsTop(topB);
+      (topP === 20) ? this.top = 150 : this.top = 0;
+    },  
 
-      closeActiveProject(){
-        if(this.currentActive != 0){
-          var getActive = this.projects.find(obj => {
-            return obj.id === this.currentActive
-          })
+    closeActiveProject(){
+      if(this.currentActive != 0){
+        var getActive = this.projects.find(obj => {
+          return obj.id === this.currentActive
+        })
 
-          if(getActive.isActive)
-            getActive.isActive = false;
-        }
-      },
+        if(getActive.isActive)
+          getActive.isActive = false;
+      }
+    },
       contactOn(){
         this.emitter.emit('contact-coming','')
         this.closeActiveProject();
