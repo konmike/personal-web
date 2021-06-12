@@ -12,12 +12,6 @@
 </script>
 
 <style lang="scss" scoped>
-$cyan: #60daaa;
-$yellow: #fbca67;
-$orange: #ff8a30;
-$red: #f45e61;
-$purple: #6477b9;
-$blue: #0eb7da;
 
 .loader{
         display: none;
@@ -44,21 +38,21 @@ $blue: #0eb7da;
             width: 100px;
             height: 100px;
             animation: rotating 7s linear;
-            border: 4px dotted $blue;
+            border: 4px dotted #00839e;
 
             &::before,
             &::after {
                 border-radius: 100%;
             }
         }
-        @keyframes rotating {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes loading {
