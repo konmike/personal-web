@@ -26,11 +26,12 @@ import Evidence from './projects/Evidence.vue'
 import Calendar from './projects/Calendar.vue'
 import Drupal from './projects/Drupal.vue'
 import Converter from './projects/Converter.vue'
+import Personal from './projects/PersonalWeb.vue'
 
 export default {
     props: [],
     components: {
-        Loader, AboutMe, Contact, Blogs,Eshop,Redesign, Evidence, Calendar, Drupal, Converter
+        Loader, AboutMe, Contact, Blogs,Eshop,Redesign, Evidence, Calendar, Drupal, Converter, Personal
     },
     data(){
         return{
@@ -48,6 +49,7 @@ export default {
                 { id: 5, name: 'Calendar', },
                 { id: 6, name: 'Drupal', },
                 { id: 7, name: 'Converter', },
+                { id: 8, name: 'Personal', },
             ]
         }
     },
@@ -111,15 +113,23 @@ export default {
 
         this.emitter.on('contact-coming', () => {
             // this.currentProject = 'Contact';
-            if(this.currentProject !== 'AboutMe')
+            if(this.currentProject !== 'AboutMe' && this.currentProject !== 'Contact')
                 this.emitter.emit('floppy', 0);
 
             this.setNewActiveWindow('Contact');
 
         });
+        this.emitter.on('aboutMe', () => {
+            // this.currentProject = 'Contact';
+            if(this.currentProject !== 'AboutMe' && this.currentProject !== 'Contact')
+                this.emitter.emit('floppy', 0);
+
+            this.setNewActiveWindow('AboutMe');
+
+        });
         this.emitter.on('powerOn', (event) => {
             if(event){
-                if(this.currentProject !== 'AboutMe' || this.currentProject !== 'Contact')
+                if(this.currentProject !== 'AboutMe' && this.currentProject !== 'Contact')
                     this.emitter.emit('floppy', 0);
                 this.isLoading = false;
                 this.isProject = false;

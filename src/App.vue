@@ -15,9 +15,11 @@
   </aside>
   
   <PC />
+<div :class="[{'show': isShow}, 'button-box']">
+  <button :class="[{'active': aboutMeShow}, 'about-me-button']" @click="aboutMeOn">O mně</button>
+  <button :class="[{'active': contactShow}, 'contact-button']"  @click="contactOn">Kontakt</button>
+</div>
 
-  <button :class="[{'show': isShow}, {'active': contactShow}, 'contact-button']"  @click="contactOn">Kontakt</button>
-  
 </template>
 
 <script>
@@ -99,12 +101,17 @@ export default {
       ],
       isShow: false,
       contactShow: false,
+      aboutMeShow: true,
       currentActive: 0,
       top: 0,
     }
     
   },
   methods: {
+    hola(e){
+      console.log('heelo')
+      console.log(e.keyCode)
+    },
     changeButtonsTop(val){
       let buttons = document.querySelectorAll('.button-controls');
       buttons[0].style.top = val + '%';
@@ -138,7 +145,14 @@ export default {
       contactOn(){
         this.emitter.emit('contact-coming','')
         this.closeActiveProject();
+        if(this.aboutMeShow) this.aboutMeShow = false;
         this.contactShow = !this.contactShow;
+      },
+      aboutMeOn(){
+        this.emitter.emit('aboutMe','')
+        this.closeActiveProject();
+        if(this.contactShow) this.contactShow = false;
+        this.aboutMeShow = !this.aboutMeShow;
       },
       checkActive(id){
         // console.log(id);
@@ -156,14 +170,16 @@ export default {
         getNewActive.isActive = !getNewActive.isActive;
 
         this.emitter.emit('projects', id);
-        if(this.contactShow)
-          this.contactShow = false;
+        if(this.contactShow) this.contactShow = false;
+        if(this.aboutMeShow) this.aboutMeShow = false;
       }
   },
   mounted() {
       this.emitter.on('powerOn', () => {
         this.isShow = !this.isShow;
-        this.closeActiveProject();     
+        this.closeActiveProject();
+        if(this.contactShow) this.contactShow = false;     
+        if(!this.aboutMeShow) this.aboutMeShow = true;     
       })
   }
 }
@@ -213,29 +229,41 @@ body{
     transition: left 1000ms 4s, margin-right 1000ms 4s, top 250ms;
   }
 }
-.contact-button{
+
+.button-box{
     position: absolute;
     top: 0;
     right: -150px;
     box-sizing: border-box;
+    transition: right 1000ms 0s, color 250ms;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 1rem 1rem 0 0;
+
+    &.show{
+      right: 0;
+      transition: right 1000ms 4s;
+    }
+
+}
+.contact-button, .about-me-button{
+    // position: absolute;
+    // top: 0;
+    // right: -150px;
+    box-sizing: border-box;
     background: none;
     border: 0;
     cursor: pointer;
-    margin: 1rem 1rem 0 0;
     color: #333;
     font-weight: 800;
     font-size: 1.4rem;
     text-transform: uppercase;
-    transition: right 1000ms 0s, color 250ms;
     text-decoration: underline;
 
     &:hover, &.active{
       color: #2c3e50;
       text-decoration: none;
-    }
-    &.show{
-      right: 0;
-      transition: right 1000ms 4s;
     }
 }
 
