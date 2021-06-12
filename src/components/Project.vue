@@ -29,13 +29,13 @@
 </script>
 
 <style lang="scss" scoped>
-$border-color: #333333;
+$border-color: var(--grey);
 
 .floppy-disk{
     border: 6px solid $border-color;
     border-radius: 5px;
     border-bottom-left-radius: 30px;
-    box-shadow: -5px 8px 10px #333333;
+    box-shadow: -5px 8px 10px var(--grey);
     height: 200px;
     width: 200px;
     position: absolute;
@@ -74,7 +74,7 @@ $border-color: #333333;
     .row{
         display: inline-block;
         width: 80%;
-        border-bottom: 2px solid #333333;
+        border-bottom: 2px solid var(--grey);
         margin-bottom: 0.5rem;
         background-color: #fff;
         &:first-child{

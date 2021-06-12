@@ -2,8 +2,8 @@
     <div class="contact">
         <h1>Zaujala tě má práce?</h1>
         
-        <span>Napiš mi e-mail:<br></span> 
-            <a class="link link-email" href="mailto:michalkonecny10@gmail.com">michalkonecny10@gmail.com</a>
+        <span class="label">Napiš mi e-mail:<br></span> 
+            <a class="link link-email" href="mailto:info@konecnymichal.cz">info@konecnymichal.cz</a>
 
         <div class="social-site">
             <a class="link link-icon" href="https://www.linkedin.com/in/michal-konecny/">
@@ -18,7 +18,6 @@
 
 <script>
     export default {
-        
     }
 </script>
 
@@ -35,10 +34,43 @@
     justify-content: center;
     box-sizing: border-box;
 
+    .button-menu{
+        font-family: 'Press Start 2P';
+        text-transform: uppercase;
+        color: rgba(255 255 255 / 0.6);
+        margin-left: auto;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        &:hover{
+            &::after{
+                color: rgba(255 255 255 / 1);
+            }
+        }
+
+        &::after{
+            content: '\f0c9';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin-left: 0.3rem;
+            margin-bottom: 0.1rem;
+            transition: color 250ms;
+        }
+    }
+
     h1{
         text-align: center;
         padding: 0 1rem;
         line-height: 2.8rem;
+        margin-top: 0.5rem;
+    }
+    .label{
+        display: inline-block;
+        margin: 1rem 0;
     }
     .link{
         color: #fff;
@@ -53,18 +85,11 @@
             padding-left: 1rem;
         }
     }
-    span{
-        display: inline-block;
-        margin: 1rem 0;
-    }
     .social-site{
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 3rem;
-        .svg-inline--fa{
-            width: 60px;
-        }
         .fa-linkedin{
             margin-right: 1rem;
         }

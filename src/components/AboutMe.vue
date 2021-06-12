@@ -1,24 +1,24 @@
 <template>
-  <dl class="about-me">
-    <dt>Uživatel:</dt>
-    <dd>Michal Konečný</dd>
-    <dt>Pozice:</dt>
-    <dd>Front-end vývojář</dd>
-    <dt>Předpoklady:</dt>
-    <dd>
-      <ul>
-        <li>absolvent FIT ČVUT,<br />obor Webové inženýrství</li>
-        <li>rád využívá HTML5, CSS3, Sass, <br />JS, Vue.js</li>
-        <li>zkušenosti s redesignem webu</li>
-        <li>aktivní práce s CMS Wordpress, Drupal</li>
-        <li>
-          aktuálně správce webu
-          <a class="link" href="https://prf.cuni.cz">prf.cuni.cz</a> a dalších
-          aplikací na PF UK
-        </li>
-      </ul>
-    </dd>
-  </dl>
+    <dl class="about-me">
+      <dt>Uživatel:</dt>
+      <dd>Michal Konečný</dd>
+      <dt>Pozice:</dt>
+      <dd>Front-end vývojář</dd>
+      <dt>Předpoklady:</dt>
+      <dd>
+        <ul>
+          <li>absolvent FIT ČVUT,<br />obor Webové inženýrství</li>
+          <li>rád využívá HTML5, CSS3, Sass, <br />JS, Vue.js</li>
+          <li>zkušenosti s redesignem webu</li>
+          <li>aktivní práce s CMS Wordpress, Drupal</li>
+          <li>
+            aktuálně správce webu
+            <a class="link" href="https://prf.cuni.cz">prf.cuni.cz</a> a dalších
+            aplikací na PF UK
+          </li>
+        </ul>
+      </dd>
+    </dl>
 </template>
 
 <script>
@@ -31,7 +31,9 @@ export default {};
   color: #fff;
   text-align: left;
   padding-left: 1rem;
-  // opacity: 0;
+  box-sizing: border-box;
+  height: 350px;
+  margin: 1rem 0;
   font-family: "Press Start 2P";
 
   dt {
@@ -65,14 +67,4 @@ export default {};
     }
   }
 }
-
-// @keyframes showAboutMe {
-//     from {
-//         opacity: 0;
-//     }
-
-//     to{
-//         opacity: 1;
-//     }
-// }
 </style>

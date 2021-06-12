@@ -1,13 +1,17 @@
 <template>
     <div class="outer">
-        <div :class="[{active: isOn}, 'inner']">
+        <div :class="[{'active': monitorIsOn}, 'inner']">
 
                 <transition name="loading" @afterEnter="afterEnter">
-                    <Loader v-show="isLoading" />
+                    <Loader v-show="showLoader" />
                 </transition>
 
+                <!-- <transition name="componentFade">
+                    <Menu v-show="showMenu"/>
+                </transition> -->
+
                 <transition name="componentFade">
-                    <component :is="currentProject" v-show="isProject"/>
+                    <component :is="currentWindow" v-show="showContent"/>
                 </transition>
 
         </div>
@@ -17,6 +21,7 @@
 
 <script>
 import Loader from './Loader.vue'
+import Menu from './Menu.vue'
 import AboutMe from './AboutMe.vue'
 import Contact from './Contact.vue'
 import Blogs from './projects/Blogs.vue'
@@ -31,17 +36,16 @@ import Personal from './projects/PersonalWeb.vue'
 export default {
     props: [],
     components: {
-        Loader, AboutMe, Contact, Blogs,Eshop,Redesign, Evidence, Calendar, Drupal, Converter, Personal
+        Loader, Menu, AboutMe, Contact, Blogs,Eshop,Redesign, Evidence, Calendar, Drupal, Converter, Personal
     },
     data(){
         return{
-            isLoading: false,
-            isProject: false,
-            isOn: false,
-            currentProject: 'AboutMe',
+            showLoader: false,
+            // showMenu: false,
+            showContent: false,
+            monitorIsOn: false,
+            currentWindow: 'Menu',
             projects: [
-                { id: -1, name: 'AboutMe', },
-                { id: 0, name: 'Contact', },
                 { id: 1, name: 'Blogs', },
                 { id: 2, name: 'Eshop', },
                 { id: 3, name: 'Redesign', },
@@ -55,29 +59,32 @@ export default {
     },
     methods: {
         afterEnter(){
-            this.isProject = !this.isProject;
-            this.isLoading = false;
+            this.showContent = !this.showContent;
+            this.showLoader = false;
         },
         setNewActiveWindow(newWindow){
-            if(newWindow === this.currentProject){
-                this.isProject = !this.isProject;
+            if(newWindow === this.currentWindow){
+                this.showContent = !this.showContent;
                 return false
             }
             
-            this.currentProject = newWindow;
+            // this.showMenu = false;
+            this.showContent = true;
+            this.currentWindow = newWindow;
             return true;
             
         },
         isNotProjectOn(){
-            return this.currentProject === 'Contact' ||
-                   this.currentProject === 'AboutMe';
+            return this.currentWindow === 'Contact' ||
+                   this.currentWindow === 'AboutMe' ||
+                   this.currentWindow === 'Menu';
                    
         },
         isEmpty(){
-            return !this.isProject;
+            return !this.showContent;
         },
         isTheSame(name){
-            return this.currentProject === name;
+            return this.currentWindow === name;
         }
         
     },
@@ -94,7 +101,7 @@ export default {
             let eq = this.isTheSame(getName.name);
             let res = this.setNewActiveWindow(getName.name);
             
-            console.log('Souc: ' + this.currentProject);
+            console.log('Souc: ' + this.currentWindow);
             console.log('Klik: ' + getName.name);
             console.log('Eq: ' + eq);
 
@@ -105,48 +112,57 @@ export default {
             else
                 this.emitter.emit('floppy', 0)
 
-            this.isProject = false;
+            this.showContent = false;
             if(res || !res && em)
-                this.isLoading = true;
+                this.showLoader = true;
 
         });
 
-        this.emitter.on('contact-coming', () => {
-            // this.currentProject = 'Contact';
-            if(this.currentProject !== 'AboutMe' && this.currentProject !== 'Contact')
-                this.emitter.emit('floppy', 0);
-
-            this.setNewActiveWindow('Contact');
-
+        this.emitter.on('menuItem', (i) => {
+            if(this.currentWindow !== 'Menu' && this.currentWindow !== 'AboutMe' && this.currentWindow !== 'Contact')
+                this.emitter.emit('floppy', 0); //reject floppy disk
+            if( i === 0 ) this.setNewActiveWindow('AboutMe'); 
+            if( i === 1 ) this.emitter.emit('showProjects'); 
+            if( i === 2 ) this.setNewActiveWindow('Contact');
         });
-        this.emitter.on('aboutMe', () => {
-            // this.currentProject = 'Contact';
-            if(this.currentProject !== 'AboutMe' && this.currentProject !== 'Contact')
-                this.emitter.emit('floppy', 0);
 
-            this.setNewActiveWindow('AboutMe');
-
-        });
-        this.emitter.on('powerOn', (event) => {
-            if(event){
-                if(this.currentProject !== 'AboutMe' && this.currentProject !== 'Contact')
-                    this.emitter.emit('floppy', 0);
-                this.isLoading = false;
-                this.isProject = false;
-                this.isOn = false;
-                this.currentProject = 'AboutMe';
-            }else{
-                this.isLoading = true;
-                this.isOn = true;
+        this.emitter.on('showMenu', () =>{
+            if(this.currentWindow !== 'Menu' && this.currentWindow !== 'AboutMe' && this.currentWindow !== 'Contact'){
+                this.emitter.emit('floppy', 0); //reject floppy disk
+                this.emitter.emit('closeProject');
             }
 
-        })
+            if(this.currentWindow === 'Menu') this.showContent = !this.showContent;
+            else{
+                if(!this.showContent) this.showContent = !this.showContent;
+                this.setNewActiveWindow('Menu');
+            }
+        });
+
+        this.emitter.on('powerOn', (event) => {
+            if(event){
+                if( this.currentWindow !== 'Menu' && 
+                    this.currentWindow !== 'AboutMe' && 
+                    this.currentWindow !== 'Contact' 
+                  )
+                    this.emitter.emit('floppy', 0); //0 == reject floppy-disk
+                if(this.showLoader) this.showLoader = false;
+                if(this.showMenu) this.showMenu = false;
+                if(this.showContent) this.showContent = false;
+                if(this.monitorIsOn) this.monitorIsOn = false;
+                this.currentWindow = 'Menu';
+            }else{
+                this.showLoader = true;
+                this.monitorIsOn = true;
+            }
+
+        });
     }
 }
 </script>
 
 <style lang="scss" scoped>
-$border-color: #333333;
+$border-color: var(--grey);
 
 .outer{
     border: 8px solid $border-color;
@@ -170,8 +186,7 @@ $border-color: #333333;
     position: absolute;
     
     &.active{
-        
-        background-color: #2c3e50;   
+        background-color: var(--main-active-background-color);   
     }
 }
 .bottom{

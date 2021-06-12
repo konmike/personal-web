@@ -1,6 +1,6 @@
 <template>
   
-  <aside :class="[{'show': isShow}, 'projects']">
+  <aside :class="[{'show': showProjects}, 'projects']">
     <button class="button-controls down" @click="changeTopOfProjects(0, 50)" :disabled="top === 0"><i class="fas fa-angle-double-down"></i></button>
     <Project v-for="(project) in projects" 
             :key="project"
@@ -15,10 +15,6 @@
   </aside>
   
   <PC />
-<div :class="[{'show': isShow}, 'button-box']">
-  <button :class="[{'active': aboutMeShow}, 'about-me-button']" @click="aboutMeOn">O mně</button>
-  <button :class="[{'active': contactShow}, 'contact-button']"  @click="contactOn">Kontakt</button>
-</div>
 
 </template>
 
@@ -99,9 +95,7 @@ export default {
           isActive: false,
         },
       ],
-      isShow: false,
-      contactShow: false,
-      aboutMeShow: true,
+      showProjects: false,
       currentActive: 0,
       top: 0,
     }
@@ -131,18 +125,6 @@ export default {
           getActive.isActive = false;
       }
     },
-    contactOn(){
-      this.emitter.emit('contact-coming','')
-      this.closeActiveProject();
-      if(this.aboutMeShow) this.aboutMeShow = false;
-      this.contactShow = !this.contactShow;
-    },
-    aboutMeOn(){
-      this.emitter.emit('aboutMe','')
-      this.closeActiveProject();
-      if(this.contactShow) this.contactShow = false;
-      this.aboutMeShow = !this.aboutMeShow;
-    },
     checkActive(id){
       var getCurrentActive = this.projects.find(obj => {
         return obj.id === this.currentActive
@@ -158,22 +140,29 @@ export default {
       getNewActive.isActive = !getNewActive.isActive;
 
       this.emitter.emit('projects', id);
-      if(this.contactShow) this.contactShow = false;
-      if(this.aboutMeShow) this.aboutMeShow = false;
     }
   },
   mounted() {
       this.emitter.on('powerOn', () => {
-        this.isShow = !this.isShow;
+        if(this.showProjects) this.showProjects = false;
+        this.closeActiveProject();   
+      });
+      this.emitter.on('showProjects', () => {
+        this.showProjects = !this.showProjects;
+      });
+      this.emitter.on('closeProject', () => {
         this.closeActiveProject();
-        if(this.contactShow) this.contactShow = false;     
-        if(!this.aboutMeShow) this.aboutMeShow = true;     
-      })
+      });
   }
 }
 </script>
 
 <style lang="scss">
+:root{
+  --main-active-background-color: #2c3e50;
+  --grey: #333333;
+}
+
 body{
   margin:0;
   overflow: hidden;
@@ -183,7 +172,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--main-active-background-color);
   max-height: 100vh;
   height: 100vh;
   width: 100%;
@@ -207,47 +196,13 @@ body{
   align-items: center;
   padding: 2rem 0;
   box-sizing: border-box;
-  transition: left 1000ms 0s, margin-right 1000ms 0s, top 250ms;
+  transition: left 1000ms, margin-right 1000ms, top 250ms;
 
   &.show{
     left: 0;
     margin-right: 0;
-    transition: left 1000ms 4s, margin-right 1000ms 4s, top 250ms;
+    // transition: left 1000ms, margin-right 1000ms, top 250ms;
   }
-}
-
-.button-box{
-    position: absolute;
-    top: 0;
-    right: -150px;
-    box-sizing: border-box;
-    transition: right 1000ms 0s, color 250ms;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 1rem 1rem 0 0;
-
-    &.show{
-      right: 0;
-      transition: right 1000ms 4s;
-    }
-
-}
-.contact-button, .about-me-button{
-    box-sizing: border-box;
-    background: none;
-    border: 0;
-    cursor: pointer;
-    color: #333;
-    font-weight: 800;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    text-decoration: underline;
-
-    &:hover, &.active{
-      color: #2c3e50;
-      text-decoration: none;
-    }
 }
 
 .project-content{
@@ -300,7 +255,7 @@ body{
 
   &:hover{
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: var(--main-active-background-color);
   }
 }
 .up{
