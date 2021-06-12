@@ -131,37 +131,36 @@ export default {
           getActive.isActive = false;
       }
     },
-      contactOn(){
-        this.emitter.emit('contact-coming','')
-        this.closeActiveProject();
-        if(this.aboutMeShow) this.aboutMeShow = false;
-        this.contactShow = !this.contactShow;
-      },
-      aboutMeOn(){
-        this.emitter.emit('aboutMe','')
-        this.closeActiveProject();
-        if(this.contactShow) this.contactShow = false;
-        this.aboutMeShow = !this.aboutMeShow;
-      },
-      checkActive(id){
-        // console.log(id);
-        var getCurrentActive = this.projects.find(obj => {
-          return obj.id === this.currentActive
-        })
-        this.currentActive = id;
+    contactOn(){
+      this.emitter.emit('contact-coming','')
+      this.closeActiveProject();
+      if(this.aboutMeShow) this.aboutMeShow = false;
+      this.contactShow = !this.contactShow;
+    },
+    aboutMeOn(){
+      this.emitter.emit('aboutMe','')
+      this.closeActiveProject();
+      if(this.contactShow) this.contactShow = false;
+      this.aboutMeShow = !this.aboutMeShow;
+    },
+    checkActive(id){
+      var getCurrentActive = this.projects.find(obj => {
+        return obj.id === this.currentActive
+      })
+      this.currentActive = id;
 
-        if(getCurrentActive != undefined && getCurrentActive.id != id){
-          getCurrentActive.isActive = false;
-        }
-        var getNewActive = this.projects.find(obj => {
-          return obj.id === id
-        })
-        getNewActive.isActive = !getNewActive.isActive;
-
-        this.emitter.emit('projects', id);
-        if(this.contactShow) this.contactShow = false;
-        if(this.aboutMeShow) this.aboutMeShow = false;
+      if(getCurrentActive != undefined && getCurrentActive.id != id){
+        getCurrentActive.isActive = false;
       }
+      var getNewActive = this.projects.find(obj => {
+        return obj.id === id
+      })
+      getNewActive.isActive = !getNewActive.isActive;
+
+      this.emitter.emit('projects', id);
+      if(this.contactShow) this.contactShow = false;
+      if(this.aboutMeShow) this.aboutMeShow = false;
+    }
   },
   mounted() {
       this.emitter.on('powerOn', () => {
@@ -172,8 +171,6 @@ export default {
       })
   }
 }
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
 </script>
 
 <style lang="scss">
@@ -237,9 +234,6 @@ body{
 
 }
 .contact-button, .about-me-button{
-    // position: absolute;
-    // top: 0;
-    // right: -150px;
     box-sizing: border-box;
     background: none;
     border: 0;
