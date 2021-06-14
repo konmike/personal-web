@@ -6,8 +6,8 @@
         <div :class="[{active: isOn}, 'help']">
             <span class="label">Stiskni:</span>
             <ul>
-                <li>K/<i class="fas fa-long-arrow-alt-up"></i> - posun nahoru</li>
                 <li>J/<i class="fas fa-long-arrow-alt-down"></i> - posun dolů</li>
+                <li>K/<i class="fas fa-long-arrow-alt-up"></i> - posun nahoru</li>
                 <li>Enter - potvrzení</li>
                 <li>M - menu</li>
             </ul>
