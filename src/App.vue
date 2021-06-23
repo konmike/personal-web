@@ -191,17 +191,18 @@ body{
   left: -500px;
   top: 0;
   display: flex;
+  opacity: 0;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   padding: 2rem 0;
   box-sizing: border-box;
-  transition: left 1000ms, margin-right 1000ms, top 250ms;
+  transition: opacity 250ms, left 1000ms, margin-right 1000ms, top 250ms;
 
   &.show{
     left: 0;
     margin-right: 0;
-    // transition: left 1000ms, margin-right 1000ms, top 250ms;
+    opacity: 1;
   }
 }
 

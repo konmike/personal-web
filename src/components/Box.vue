@@ -217,6 +217,7 @@ $border-color: var(--grey);
         position: absolute;
         background-color: #fff;
         display: flex;
+        opacity: 0;
         justify-content: center;
         align-items: center;
         overflow: hidden;
@@ -224,15 +225,19 @@ $border-color: var(--grey);
         &.active{
             bottom: 0;
             height: 2px;
+            opacity: 1;
             animation: disk 1000ms forwards;
         }
         &.reject{
+            // opacity: 1;
             animation: reject 500ms forwards;
         }
         &.floppy{
+            opacity: 1;
             animation: floppy 2000ms forwards;
         }
         &.floppyCopy{
+            opacity: 1;
             animation: floppyCopy 2000ms forwards;
         }
 
@@ -291,16 +296,19 @@ $border-color: var(--grey);
         bottom: 0px;
         height: 2px;
         border-width: 1px;
+        opacity: 1;
     }
     50%{
         bottom: -198px;
         height: 200px;
         border-width: 6px;
+        opacity: 0.8;
     }
     100%{
         bottom: -450px;
         height: 200px;
         border-width: 6px;
+        opacity: 0;
     }
 }
 
