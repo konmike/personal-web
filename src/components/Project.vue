@@ -1,7 +1,5 @@
 <template>
-    <div :class="[{active: isActive }, 'floppy-disk']" 
-          
-         :style="{zIndex: zI, marginBottom: mB + 'rem',}">
+    <div :class="[{active: isActive }, 'floppy-disk']">
         <div class="content">
             <span class="row">{{name}}</span>
             <span class="row">{{description}}</span>
@@ -16,10 +14,10 @@
 <script>
     
     export default {
-        props: ['name', 'description', 'zI', 'mB','isActive'],
+        props: ['name', 'description', 'isActive'],
         data (){
             return{
-                counter: 0,
+                
             }
         },
         methods: {
@@ -36,9 +34,9 @@ $border-color: var(--grey);
     border-radius: 5px;
     border-bottom-left-radius: 30px;
     box-shadow: -5px 8px 10px var(--grey);
-    height: 200px;
-    width: 200px;
-    position: absolute;
+    min-height: 200px;
+    min-width: 200px;
+    position: relative;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -48,14 +46,23 @@ $border-color: var(--grey);
     transform: scale(1) translateY(0);
     transition: all 250ms;
 
-    &:hover{
-        transform: scale(1.2) translate(2rem, -1rem);
-        z-index: 20 !important;
+    &:not(:first-child){
+        margin-top: -120px;
     }
-    &.active{
-        transform: scale(1.2) translate(2rem, -1rem);
-        z-index: 19;
+
+    &:first-child{
+        &:hover{
+            margin-top: 20px;
+        }
     }
+
+    &:hover, &.active{
+        transform: scale(1.2) translate(2rem, -1rem);
+        z-index: 20;
+        margin-bottom: 120px;
+        margin-top: -60px;
+    }
+    
 }
 
 .content{

@@ -1,17 +1,13 @@
 <template>
   
   <aside :class="[{'show': showProjects}, 'projects']">
-    <button class="button-controls down" @click="changeTopOfProjects(0, 50)" :disabled="top === 0"><i class="fas fa-angle-double-down"></i></button>
     <Project v-for="(project) in projects" 
             :key="project"
             :name="project.title"
             :description="project.description"
-            :zI="project.zI"
-            :mB="project.mB"
             :isActive="project.isActive"
             @click="checkActive(project.id)"
     />
-    <button class="button-controls up" @click="changeTopOfProjects(20, 30)" :disabled="top === 150"><i class="fas fa-angle-double-up"></i></button>
   </aside>
   
   <PC />
@@ -34,64 +30,48 @@ export default {
           id: 1,
           title: 'Blogy',
           description: 'Wordpress',
-          zI: 10,
-          mB: 0,
           isActive: false,
         },
         {
           id: 2,
           title: 'E-shop',
           description: 'HTML, CSS',
-          zI: 9,
-          mB: 4,
           isActive: false,
         },
         {
           id: 3,
           title: 'Redesign',
           description: 'Wordpress',
-          zI: 8,
-          mB: 8,
           isActive: false,
         },
         {
           id: 4,
           title: 'Evidence',
           description: 'Symfony, Twig',
-          zI: 7,
-          mB: 12,
           isActive: false,
         },
         {
           id: 5,
           title: 'Kalendář',
           description: 'Spring, JS',
-          zI: 6,
-          mB: 16,
           isActive: false,
         },
         {
           id: 6,
           title: 'PF UK',
           description: 'Drupal',
-          zI: 5,
-          mB: 20,
           isActive: false,
         },
         {
           id: 7,
           title: 'Converter',
           description: 'PHP, JS',
-          zI: 4,
-          mB: 24,
           isActive: false,
         },
         {
           id: 8,
           title: 'Osobní web',
           description: 'Vue.js',
-          zI: 3,
-          mB: 28,
           isActive: false,
         },
       ],
@@ -102,19 +82,6 @@ export default {
     
   },
   methods: {
-    changeButtonsTop(val){
-      let buttons = document.querySelectorAll('.button-controls');
-      buttons[0].style.top = val + '%';
-      buttons[1].style.top = val + '%';
-      
-    },
-    changeTopOfProjects(topP, topB){
-      let aside = document.querySelector('.projects');
-      aside.style.top = topP + '%';
-      this.changeButtonsTop(topB);
-      (topP === 20) ? this.top = 150 : this.top = 0;
-    },  
-
     closeActiveProject(){
       if(this.currentActive != 0){
         var getActive = this.projects.find(obj => {
@@ -193,11 +160,25 @@ body{
   display: flex;
   opacity: 0;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding: 2rem 0;
   box-sizing: border-box;
   transition: opacity 250ms, left 1000ms, margin-right 1000ms, top 250ms;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #2c3e50;
+    border-radius: 10px;
+    border: 3px solid #d8d8d8;
+  }
+  &::-webkit-scrollbar-track {
+    background: #d8d8d8;
+  }
 
   &.show{
     left: 0;
