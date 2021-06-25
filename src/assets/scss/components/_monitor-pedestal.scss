@@ -1,0 +1,36 @@
+@use '../abstracts' as *;
+
+.pedestal {
+  display: none;
+  @include mq(desktop) {
+    width: 520px;
+    height: 30px;
+    position: relative;
+    display: block;
+
+    &::after {
+      content: "";
+      background-color: var(--grey);
+      width: 8px;
+      height: 30px;
+      display: inline-block;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      border-top: 0;
+      transform: skewX(-25deg);
+    }
+    &::before {
+      content: "";
+      background-color: var(--grey);
+      width: 8px;
+      height: 30px;
+      display: inline-block;
+      position: absolute;
+      right: 100%;
+      top: 0;
+      border-top: 0;
+      transform: skewX(25deg);
+    }
+  }
+}

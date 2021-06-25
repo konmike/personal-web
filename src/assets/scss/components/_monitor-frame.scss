@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+
+.frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  place-content: center;
+  place-items: center;
+
+  @include mq(desktop) {
+    border: 8px solid var(--grey);
+    width: 550px;
+    height: 400px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}

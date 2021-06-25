@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+.main-content {
+  background-color: var(--main-active-background-color);
+  width: 100%;
+  max-width: 100%;
+
+  @include mq(desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    max-width: 70%;
+    box-sizing: border-box;
+    transition: width 1000ms;
+    background-color: transparent;
+
+    &.active {
+      width: 70%;
+      max-width: 70%;
+    }
+  }
+}

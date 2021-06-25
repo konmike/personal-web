@@ -28,19 +28,3 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.main-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    max-width: 70%;
-    box-sizing: border-box;
-    transition: width 1000ms;
-}
-.active{
-    width: 70%;
-    max-width: 70%;
-}
-</style>

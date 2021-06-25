@@ -1,14 +1,10 @@
 <template>
-    <div class="outer">
-        <div :class="[{'active': monitorIsOn}, 'inner']">
+    <div class="frame">
+        <div :class="[{'active': monitorIsOn}, 'screen']">
 
                 <transition name="loading" @afterEnter="afterEnter">
                     <Loader v-show="showLoader" />
                 </transition>
-
-                <!-- <transition name="componentFade">
-                    <Menu v-show="showMenu"/>
-                </transition> -->
 
                 <transition name="componentFade">
                     <component :is="currentWindow" v-show="showContent"/>
@@ -16,7 +12,7 @@
 
         </div>
     </div>
-    <div class="bottom"></div>
+    <div class="pedestal"></div>
 </template>
 
 <script>
@@ -162,64 +158,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$border-color: var(--grey);
 
-.outer{
-    border: 8px solid $border-color;
-    width: 550px;
-    height: 400px;
-    display: flex;
-    place-content: center;
-    place-items: center;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-.inner{
-    border: 8px solid $border-color;
-    width: 500px;
-    height: 350px;
-    border-radius: 40px;
-    background-color: #444;
-    z-index: 12;
-    position: absolute;
-    
-    &.active{
-        background-color: var(--main-active-background-color);   
-    }
-}
-.bottom{
-    width: 520px;
-    height: 30px;
-    position: relative;
-    &::after{
-        content: "";
-        background-color: $border-color;
-        width: 8px;
-        height: 30px;
-        display: inline-block;
-        position: absolute;
-        left: 100%;
-        top: 0;
-        border-top: 0;
-        transform: skewX(-25deg);
-    }
-    &::before{
-        content: "";
-        background-color: $border-color;
-        width: 8px;
-        height: 30px;
-        display: inline-block;
-        position: absolute;
-        right: 100%;
-        top: 0;
-        border-top: 0;
-        transform: skewX(25deg);
-    }
 
-    
-}
+
     .loading-enter-active{
         display: flex;
         // transform: scale(1.5);
