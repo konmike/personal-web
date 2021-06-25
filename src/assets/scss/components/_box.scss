@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+.box {
+  display: none;
+
+  @include mq(desktop) {
+    width: 700px;
+    height: 160px;
+    border: 8px solid var(--grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+}

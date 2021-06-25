@@ -1,0 +1,14 @@
+$breakpoints: (
+  desktop: 70.313em,
+);
+
+@mixin mq($key) {
+  $size: map-get(
+    $map: $breakpoints,
+    $key: $key,
+  );
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}

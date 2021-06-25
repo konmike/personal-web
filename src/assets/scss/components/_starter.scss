@@ -1,0 +1,88 @@
+@use '../abstracts/var' as *;
+
+.starter {
+  border: 7px solid var(--grey);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  transition: all 250ms;
+  position: relative;
+  transform: scale(1);
+
+  &.active {
+    background-color: var(--main-active-background-color);
+    .fa-power-off {
+      fill: #fff;
+    }
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+  .fa-power-off {
+    width: 50%;
+    height: 50%;
+    fill: var(--grey);
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  &::after,
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 3rem;
+    color: var(--main-active-background-color);
+    position: absolute;
+  }
+  &::before {
+    content: "\f101";
+    right: 50px;
+    padding-right: 1rem;
+    animation: bRight 700ms infinite;
+  }
+  &::after {
+    content: "\f100";
+    left: 50px;
+    padding-left: 1rem;
+    animation: bLeft 700ms infinite;
+  }
+}
+
+@keyframes bRight {
+  0% {
+    right: 50px;
+    transform: scale(1);
+  }
+  50% {
+    right: 80px;
+    transform: scale(1.5);
+  }
+  100% {
+    right: 50px;
+    transform: scale(1);
+  }
+}
+@keyframes bLeft {
+  0% {
+    left: 50px;
+    transform: scale(1);
+  }
+  50% {
+    left: 80px;
+    transform: scale(1.5);
+  }
+  100% {
+    left: 50px;
+    transform: scale(1);
+  }
+}
