@@ -79,6 +79,12 @@
             this.emitter.on('powerOnKeyboard', () => {
                 this.powerOn();
             })
+        },
+        created(){
+            var self = this;
+            window.setTimeout(function() {
+                self.powerOn();
+            }, 500);
         }
         
     }

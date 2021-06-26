@@ -40,7 +40,7 @@ export default {
             // showMenu: false,
             showContent: false,
             monitorIsOn: false,
-            currentWindow: 'Menu',
+            currentWindow: 'AboutMe',
             projects: [
                 { id: 1, name: 'Blogs', },
                 { id: 2, name: 'Eshop', },

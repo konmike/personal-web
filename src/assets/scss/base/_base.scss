@@ -1,12 +1,10 @@
-// *,
-// ::after,
-// ::before {
-//   box-sizing: border-box;
-// }
+@use '../abstracts' as *;
 
 body {
   margin: 0;
-  overflow: hidden;
+  @include mq(desktop) {
+    overflow: hidden;
+  }
 }
 #app {
   font-family: Helvetica, Arial, sans-serif;
@@ -14,12 +12,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--main-active-background-color);
-  max-height: 100vh;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   max-width: 100%;
   display: flex;
   box-sizing: border-box;
+
+  @include mq(desktop) {
+    max-height: 100vh;
+    height: 100vh;
+  }
 }
 
 .project-content {
