@@ -1,7 +1,20 @@
 <template>
     <div class="frame">
         <div :class="[{'active': monitorIsOn}, 'screen']">
-
+                <transition name="componentFade">
+                    <BackToProject 
+                        @click="showProjectMenu"
+                        v-show="currentWindow !== 'Menu' && currentWindow !== 'AboutMe' && currentWindow !== 'Contact' && currentWindow !== 'Blank'"
+                    />
+                </transition>
+                
+                <transition name="componentFade">
+                    <MenuButton 
+                        @click="setNewActiveWindow('Menu')"
+                        v-show="currentWindow !== 'Menu' && currentWindow !== 'Blank'"
+                    />
+                </transition>
+                
                 <transition name="loading" @afterEnter="afterEnter">
                     <Loader v-show="showLoader" />
                 </transition>
@@ -18,6 +31,8 @@
 <script>
 import Loader from './Loader.vue'
 import Menu from './Menu.vue'
+import MenuButton from './MenuButton.vue'
+import BackToProject from './BackToProject.vue'
 import AboutMe from './AboutMe.vue'
 import Contact from './Contact.vue'
 import Blogs from './projects/Blogs.vue'
@@ -32,15 +47,17 @@ import Personal from './projects/PersonalWeb.vue'
 export default {
     props: [],
     components: {
-        Loader, Menu, AboutMe, Contact, Blogs,Eshop,Redesign, Evidence, Calendar, Drupal, Converter, Personal
+        Loader, Menu, MenuButton, BackToProject, 
+        AboutMe, Contact, Blogs,
+        Eshop,Redesign, Evidence, 
+        Calendar, Drupal, Converter, Personal
     },
     data(){
         return{
             showLoader: false,
-            // showMenu: false,
             showContent: false,
             monitorIsOn: false,
-            currentWindow: 'AboutMe',
+            currentWindow: 'Menu',
             projects: [
                 { id: 1, name: 'Blogs', },
                 { id: 2, name: 'Eshop', },
@@ -81,6 +98,13 @@ export default {
         },
         isTheSame(name){
             return this.currentWindow === name;
+        },
+        showProjectMenu(){
+            this.currentWindow = 'Blank';
+            this.emitter.emit('showProjectMenu');
+        },
+        getWidthScreen(){
+            return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         }
         
     },
@@ -118,7 +142,14 @@ export default {
             if(this.currentWindow !== 'Menu' && this.currentWindow !== 'AboutMe' && this.currentWindow !== 'Contact')
                 this.emitter.emit('floppy', 0); //reject floppy disk
             if( i === 0 ) this.setNewActiveWindow('AboutMe'); 
-            if( i === 1 ) this.emitter.emit('showProjects'); 
+            if( i === 1 ){
+                
+                if(this.getWidthScreen() < 1125) this.currentWindow = 'Blank';
+
+                 this.emitter.emit('showProjects');
+
+            }
+                
             if( i === 2 ) this.setNewActiveWindow('Contact');
         });
 

@@ -1,14 +1,17 @@
 <template>
-  
-  <aside :class="[{'show': showProjects}, 'projects']">
-    <Project v-for="(project) in projects" 
-            :key="project"
-            :name="project.title"
-            :description="project.description"
-            :isActive="project.isActive"
-            @click="checkActive(project.id)"
-    />
-  </aside>
+  <transition name="asideShow">
+    <aside :class="['projects']" v-show="showProjects">
+      <MenuButton @click="showMenu" />
+      <Project v-for="(project) in projects" 
+              :key="project"
+              :name="project.title"
+              :description="project.description"
+              :isActive="project.isActive"
+              @click="checkActive(project.id)"
+              
+      />
+    </aside>
+  </transition>
   
   <PC />
 
@@ -17,11 +20,12 @@
 <script>
 import Project from './components/Project.vue'
 import PC from './components/PC.vue'
+import MenuButton from './components/MenuButton.vue'
 import { computed } from 'vue'
 
 export default {
   components: {
-    Project, PC
+    Project, PC, MenuButton
   },
   data(){
     return{
@@ -106,7 +110,17 @@ export default {
       })
       getNewActive.isActive = !getNewActive.isActive;
 
+      const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      if(width < 1125)
+        this.showProjects = !this.showProjects;  
+      // console.log(width);
+      // console.log(window.screen.width);
+
       this.emitter.emit('projects', id);
+    },
+    showMenu(){
+      this.showProjects = !this.showProjects;
+      this.emitter.emit('showMenu');
     }
   },
   mounted() {
@@ -119,6 +133,9 @@ export default {
       });
       this.emitter.on('closeProject', () => {
         this.closeActiveProject();
+      });
+      this.emitter.on('showProjectMenu', () => {
+        this.showProjects = !this.showProjects;
       });
   }
 }

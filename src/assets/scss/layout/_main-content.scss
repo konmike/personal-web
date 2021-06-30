@@ -17,8 +17,7 @@
     background-color: transparent;
 
     &.active {
-      width: 70%;
-      max-width: 70%;
+      transition: width 1000ms;
     }
   }
 }

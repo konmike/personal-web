@@ -1,5 +1,5 @@
 <template>
-    <main :class="[{'active': powerOn}, 'main-content']">
+    <main class="main-content">
         <Monitor />
         <Box />
     </main>
@@ -10,7 +10,7 @@ import Monitor from './Monitor.vue'
 import Box from './Box.vue'
 
 export default {
-    props: ['showProject', 'is-contact'],
+    
     components: {
         Monitor, Box
     },

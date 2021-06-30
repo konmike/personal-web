@@ -1,6 +1,6 @@
 <template>
     <div class="contact">
-        <h1>Zaujala tě má práce?</h1>
+        <h1>Zaujala&nbsp;tě má&nbsp;práce?</h1>
         
         <span class="label">Napiš mi e-mail:<br></span> 
             <a class="link link-email" href="mailto:info@konecnymichal.cz">info@konecnymichal.cz</a>

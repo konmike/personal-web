@@ -4,7 +4,6 @@
         <ul>
             <li>právě si prohlížíte</li>
             <li>vzniká v rámci studia Vue.js</li>
-            <li>prozatím pouze desktop verze</li>
         </ul>
         <div class="links">
             <a href="https://github.com/konmike/personal-web" target="_blank" class="link">

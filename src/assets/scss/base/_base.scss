@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
   @include mq(desktop) {
     overflow: hidden;
   }
@@ -16,6 +17,7 @@ body {
   width: 100%;
   max-width: 100%;
   display: flex;
+  justify-content: center;
   box-sizing: border-box;
 
   @include mq(desktop) {
@@ -24,22 +26,6 @@ body {
   }
 }
 
-.project-content {
-  color: #fff;
-  font-family: "Press Start 2P";
-  display: flex;
-  flex-direction: column;
-  max-height: 350px;
-  overflow: hidden;
-  overflow-y: auto;
-  ul {
-    text-align: left;
-    li {
-      margin-bottom: 0.5rem;
-      line-height: 1.5rem;
-    }
-  }
-}
 .link {
   color: #fff;
   transition: all 250ms;

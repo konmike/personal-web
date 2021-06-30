@@ -83,7 +83,9 @@
         created(){
             var self = this;
             window.setTimeout(function() {
-                self.powerOn();
+                const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                if(width < 1125)
+                    self.powerOn();
             }, 500);
         }
         

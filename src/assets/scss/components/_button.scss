@@ -1,0 +1,46 @@
+@use '../abstracts' as *;
+
+.button {
+  font-family: "Press Start 2P";
+  color: #fff;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  border: 0;
+  margin: 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+
+  cursor: pointer;
+
+  @include mq(desktop) {
+    display: none;
+  }
+
+  &--menu {
+    right: 0;
+    &::after {
+      content: "\f0c9";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 800;
+      font-size: 1.2rem;
+      padding-left: 0.5rem;
+      padding-bottom: 0.2rem;
+    }
+  }
+  &--project {
+    padding-top: 0.3rem;
+    left: 0;
+    &::before {
+      content: "<";
+      font-weight: 800;
+      font-size: 1.2rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  &.hide {
+    display: none;
+  }
+}
