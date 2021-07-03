@@ -1,12 +1,10 @@
 <template>
-    <div class="loader">
-        <span class="circle"></span>
-        <span class="logo">MK</span>
-    </div>
+	<div class="loader">
+		<span class="circle"></span>
+		<span class="logo">MK</span>
+	</div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {};
 </script>
