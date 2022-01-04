@@ -1,0 +1,42 @@
+@use "../abstracts" as *;
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  column-gap: 1em;
+
+  width: 100%;
+  margin-right: 0.5em;
+
+  position: absolute;
+  top: 1em;
+  right: -100vw;
+
+  transition: right 500ms;
+
+  @include mq(mobile) {
+    column-gap: 1.5em;
+    margin-right: 1em;
+  }
+
+  li {
+    padding-bottom: 3px;
+    cursor: pointer;
+    &:hover a {
+      border-bottom: 3px solid hsl(var(--clr-blue));
+    }
+    &:last-child {
+      margin-right: 1em;
+    }
+  }
+
+  a {
+    transition: all 250ms;
+    border-bottom: 3px solid transparent;
+
+    &.router-link-exact-active {
+      border-bottom: 3px solid hsl(var(--clr-blue));
+    }
+  }
+}
