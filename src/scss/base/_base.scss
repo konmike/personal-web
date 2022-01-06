@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+
+:root {
+  --clr-blue: 216, 100%, 50%;
+  --folder-width: 8em;
+  --folder-height: calc(0.8 * var(--folder-width));
+  --folder-deco-width: calc(var(--folder-width) / 3.5);
+  --folder-cover-height: calc(0.7 * var(--folder-width));
+  --folder-slip-height: calc(var(--folder-height) - var(--folder-cover-height));
+  --folder-border-radius: calc(var(--folder-width) / 10);
+  --thumb-width: calc(0.6 * var(--folder-width));
+  --grid-item-padding: 3em;
+}
+
+body {
+  background-color: rgba($color: #000000, $alpha: 1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    transition: background-color 250ms;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%),
+      inset -2px -2px 2px rgb(0 0 0 / 25%);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}

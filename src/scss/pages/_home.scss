@@ -1,0 +1,18 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1.5em;
+
+  .title {
+    margin-bottom: 0.15em;
+  }
+
+  .subtitle {
+    background-image: url("../img/brush.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-inline: 0.5em;
+  }
+}

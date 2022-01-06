@@ -1,7 +1,12 @@
 @use "../abstracts" as *;
 
 :root {
-  --fs-menu: 1.125rem;
+  --ff-titles: Avenir, Helvetica, Arial, sans-serif;
+  --ff-menu: Tahoma, Segoe UI, Geneva, Verdana, sans-serif;
+  --fs-title: 2.5rem;
+  --fs-subtitle: 1.8rem;
+  //   --fs-menu: 1.125rem;
+  --fs-menu: 1.3rem;
   --clr-link: 0, 100%, 100%;
 }
 
@@ -13,9 +18,36 @@
 
 .menu li a {
   font-size: var(--fs-menu);
-  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+  font-family: var(--ff-menu);
   font-weight: 800;
   color: hsl(var(--clr-link));
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-titles);
+}
+
+.title,
+.subtitle {
+  text-transform: uppercase;
+}
+
+.home {
+  .title {
+    font-size: var(--fs-title);
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: 2px;
+  }
+  .subtitle {
+    font-size: var(--fs-subtitle);
+    color: #000000;
+    line-height: 4;
+    letter-spacing: 3px;
+  }
 }
