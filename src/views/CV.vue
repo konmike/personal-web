@@ -1,7 +1,7 @@
 <template>
   <div class="cv">
     <div class="information me">Michal Konečný</div>
-    <div class="information birth-year">ročník 1995</div>
+    <div class="information birth-year">narozen v roce 1995</div>
     <ul class="information study">
       <li class="item">
         2020 - absolvent bakalářského oboru Webové a softwarové inženýrství na
