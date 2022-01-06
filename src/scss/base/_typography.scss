@@ -32,6 +32,11 @@ h3 {
   font-family: var(--ff-titles);
 }
 
+.title {
+  font-size: var(--fs-title);
+  color: #ffffff;
+  line-height: 1.1;
+}
 .title,
 .subtitle {
   text-transform: uppercase;
@@ -39,8 +44,6 @@ h3 {
 
 .home {
   .title {
-    font-size: var(--fs-title);
-    color: #ffffff;
     line-height: 1.1;
     letter-spacing: 2px;
   }
@@ -49,5 +52,29 @@ h3 {
     color: #000000;
     line-height: 4;
     letter-spacing: 3px;
+  }
+}
+
+.cv {
+  color: white;
+  font-weight: 800;
+  font-family: Calibri, sans-serif;
+
+  .information {
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 1.3;
+    font-size: 1.3rem;
+  }
+}
+
+.contact {
+  .title {
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+  }
+  .email {
+    color: #ffffff;
+    letter-spacing: 2px;
   }
 }
