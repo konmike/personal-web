@@ -1,0 +1,26 @@
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1em 0 1em 1em;
+  margin-left: auto;
+  text-align: right;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    &::before {
+      color: #ff0000;
+    }
+  }
+
+  &::before {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.7rem;
+    padding-right: 0.3em;
+    transition: color 250ms;
+  }
+}
