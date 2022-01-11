@@ -33,6 +33,10 @@ export default {
       //   console.log(arr[0].replace("#", "").trim());
       return arr[0].replace("#", "").trim();
     },
+    getDate(date) {
+      let d = new Date(date);
+      return d;
+    },
   },
 
   mounted() {
@@ -41,10 +45,14 @@ export default {
       axios
         .get(`https://api.github.com/users/konmike/repos`)
         .then((res) => {
-          const pro = res.data.filter((it) => it.topics.includes("sass"));
           this.projects = [];
           let left = true;
-          pro.forEach((el) => {
+          // res.data.sort((a, b) => {
+          //   // console.log(a);
+          //   return this.getDate(a.created_at) - this.getDate(b.created_at);
+          // });
+          res.data.forEach((el) => {
+            // let d1 = new Date(el.created_at);
             // console.log(el);
 
             axios
@@ -66,12 +74,15 @@ export default {
                   tags: el.topics,
                   left: left,
                 });
+
                 left = left ? false : true;
               })
               .catch((err) => {
                 console.log(err);
               });
           });
+
+          // console.log(this.projects);
           //   console.log(pro);
         })
         .catch((error) => {
