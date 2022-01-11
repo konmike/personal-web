@@ -36,7 +36,7 @@
         />
         <img
           class="folder__thumb"
-          src="../assets/project-preview/pf-screen-sm.png"
+          src="../assets/project-preview/srdce-screen.png"
         />
         <img
           class="folder__thumb"
