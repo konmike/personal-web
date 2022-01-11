@@ -1,0 +1,53 @@
+.projects-feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 1em 1.5em;
+  background-color: rgba($color: #000000, $alpha: 0.98);
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3em;
+  margin: 1em 0 2em 0;
+}
+
+.modal-enter-from {
+  transform: translateY(-100vh);
+  opacity: 0;
+}
+.modal-enter-to {
+  transform: translateY(0);
+  opacity: 1;
+}
+.modal-enter-active,
+.modal-leave-active {
+  transition: transform 250ms, opacity 150ms;
+}
+
+// .modal-enter,
+.modal-leave-to {
+  transform: translateY(-100vh);
+  opacity: 0;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: scale(0.5);
+}
+.list-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+.list-enter-active,
+.list-leave-active {
+  transition: opacity 550ms, transform 750ms;
+}
