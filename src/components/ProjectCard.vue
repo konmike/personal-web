@@ -2,9 +2,9 @@
   <article :class="classes" :style="{ '--backgroundImage': backgroundImage }">
     <a
       :href="project.link"
-      data-aos="fade-right"
-      class="project-preview-link"
-      v-if="!mobile & project.left"
+      :data-aos="[project.left ? 'fade-right' : 'fade-left']"
+      :class="[project.left ? 'left' : 'right', 'project-preview-link']"
+      v-if="!mobile"
     >
       <img :src="backgroundImageUrl" alt="Project-image" />
     </a>
@@ -54,14 +54,6 @@
         </li>
       </ul>
     </footer>
-    <a
-      :href="project.link"
-      data-aos="fade-left"
-      class="project-preview-link project-preview-link-right"
-      v-if="!mobile & !project.left"
-    >
-      <img :src="backgroundImageUrl" alt="Project-image" />
-    </a>
   </article>
 </template>
 
