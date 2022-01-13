@@ -37,11 +37,11 @@ export default {
   mounted() {
     this.emitter.on("show-projects", (data) => {
       this.show = data;
+
+      if (this.projects.length != 0) return;
       axios
         .get(`https://api.github.com/users/konmike/repos`)
         .then((res) => {
-          this.projects = [];
-
           res.data.forEach((el) => {
             axios
               .get(

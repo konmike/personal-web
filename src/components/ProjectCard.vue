@@ -1,12 +1,12 @@
 <template>
-  <article :class="classes" :style="{ '--backgroundImage': backgroundImage }">
+  <article :class="classes" :style="{ '--backgroundImage': getBgImageUrl }">
     <a
       :href="project.link"
       :data-aos="[project.left ? 'fade-right' : 'fade-left']"
       :class="[project.left ? 'left' : 'right', 'project-preview-link']"
       v-if="!mobile"
     >
-      <img :src="backgroundImageUrl" alt="Project-image" />
+      <img :src="getImageUrl" alt="Project-image" />
     </a>
     <header class="header">
       <svg
@@ -68,8 +68,6 @@ export default {
   data() {
     return {
       mobile: false,
-      backgroundImage: "",
-      backgroundImageUrl: "",
       classes: "project-card",
     };
   },
@@ -80,21 +78,28 @@ export default {
         ? "project-card mobile"
         : "project-card desktop";
     },
-    addBackground() {
-      this.backgroundImage =
-        "url(https://github.com/konmike/" +
-        this.project.name +
-        "/blob/master/screenshot.webp?raw=true)";
-      this.backgroundImageUrl =
+  },
+  computed: {
+    getImageUrl() {
+      return (
         "https://github.com/konmike/" +
         this.project.name +
-        "/blob/master/screenshot.webp?raw=true";
+        "/blob/master/screenshot.webp?raw=true"
+      );
+    },
+    getBgImageUrl() {
+      return (
+        "url(https://github.com/konmike/" +
+        this.project.name +
+        "/blob/master/screenshot.webp?raw=true)"
+      );
     },
   },
 
   mounted() {
-    // console.log(this.project.left);
-    this.addBackground();
+    let image = new Image();
+    image.src = this.getImageUrl;
+
     this.mobOrDesk();
     window.addEventListener("resize", this.mobOrDesk);
     AOS.init();
