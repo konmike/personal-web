@@ -30,12 +30,7 @@ export default {
   methods: {
     getTitle(data) {
       const arr = data.split("\n");
-      //   console.log(arr[0].replace("#", "").trim());
       return arr[0].replace("#", "").trim();
-    },
-    getDate(date) {
-      let d = new Date(date);
-      return d;
     },
   },
 
@@ -46,15 +41,8 @@ export default {
         .get(`https://api.github.com/users/konmike/repos`)
         .then((res) => {
           this.projects = [];
-          let left = true;
-          // res.data.sort((a, b) => {
-          //   // console.log(a);
-          //   return this.getDate(a.created_at) - this.getDate(b.created_at);
-          // });
-          res.data.forEach((el) => {
-            // let d1 = new Date(el.created_at);
-            // console.log(el);
 
+          res.data.forEach((el) => {
             axios
               .get(
                 `https://raw.githubusercontent.com/konmike/` +
@@ -62,8 +50,6 @@ export default {
                   `/master/README.md`
               )
               .then((readme) => {
-                // console.log(readme.data);
-
                 this.projects.push({
                   id: el.id,
                   title: this.getTitle(readme.data),
@@ -72,24 +58,27 @@ export default {
                   githubUrl: el.html_url,
                   link: el.homepage,
                   tags: el.topics,
-                  left: left,
+                  left: true,
                 });
 
-                left = left ? false : true;
+                this.projects.sort((a, b) => {
+                  return Number(b.id) - Number(a.id);
+                });
+
+                let left = true;
+                this.projects.forEach((element) => {
+                  element.left = left;
+                  left = !left;
+                });
               })
               .catch((err) => {
                 console.log(err);
               });
           });
-
-          // console.log(this.projects);
-          //   console.log(pro);
         })
         .catch((error) => {
           console.log(error);
         });
-
-      //   console.log(this.show);
     });
   },
 };
