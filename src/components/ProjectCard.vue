@@ -99,7 +99,6 @@ export default {
   mounted() {
     let image = new Image();
     image.src = this.getImageUrl;
-
     this.mobOrDesk();
     window.addEventListener("resize", this.mobOrDesk);
     AOS.init();
