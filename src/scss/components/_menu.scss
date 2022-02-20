@@ -5,14 +5,11 @@
   flex-direction: row;
   justify-content: flex-end;
   column-gap: 1em;
-
   width: 100%;
   margin-right: 0.5em;
-
   position: absolute;
   top: 1em;
   right: -100vw;
-
   transition: right 500ms;
 
   @include mq(mobile) {
@@ -23,7 +20,8 @@
   li {
     padding-bottom: 3px;
     cursor: pointer;
-    &:hover a {
+    &:hover a,
+    &:focus-visible {
       border-bottom: 3px solid hsl(var(--clr-blue));
     }
     &:last-child {

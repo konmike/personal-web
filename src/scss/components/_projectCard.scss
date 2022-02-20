@@ -85,6 +85,9 @@
 .project-card.mobile {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95)),
     var(--backgroundImage);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .project-card.desktop {
   display: grid;

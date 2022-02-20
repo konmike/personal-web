@@ -33,7 +33,7 @@ export default {
       ).then(function () {
         document.getElementById("loader").classList.add("static");
         document.getElementById("menu").style.right = 0;
-        document.getElementsByTagName("body")[0].style.overflowY = "overlay";
+        document.body.style.overflowY = "auto";
         return;
       });
     });
