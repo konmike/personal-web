@@ -23,10 +23,29 @@
 
     <ul class="information jobs">
       <li class="item">
-        2019 - současnost, Právnická fakulta Univerzity Karlovy, práce s RS
-        Drupal verze 7 a 8, Wordpress, správa webu
-        <a href="https://prf.cuni.cz" class="link">prf.cuni.cz</a>, vývoj
-        aplikací na automatizaci procesů, tvorba microsites
+        září 2022 - současnost, Etnetera Core, spolupráce na redesignu webu
+        <a href="https://www.o2.cz" class="link" target="_blank">o2.cz</a>,
+        vývoj statických komponent, nasazení komponent v rámci jNetPublish
+        systému, support pro
+        <a href="https://www.o2.cz" class="link" target="_blank">o2.cz</a>
+        <ul class="sub-list">
+          <li class="item ref">Reference může dodat:</li>
+          <li class="item">
+            Eva Sakalášová<br /><a
+              href="mailto:eva.sakalasova@etnetera.cz"
+              class="link"
+              >eva.sakalasova@etnetera.cz</a
+            >
+          </li>
+        </ul>
+      </li>
+
+      <li class="item">
+        říjen 2019 - srpen 2022, Právnická fakulta Univerzity Karlovy, práce s
+        RS Drupal verze 7, 8, 9, Wordpress, správa webu
+        <a href="https://prf.cuni.cz" class="link" target="_blank"
+          >prf.cuni.cz</a
+        >, vývoj aplikací na automatizaci procesů, tvorba microsites
         <ul class="sub-list">
           <li class="item ref">Reference může dodat:</li>
           <li class="item">
@@ -40,8 +59,8 @@
       </li>
       <li class="item">
         únor - květen 2020, redesign webové prezentace
-        <a href="https://aksm.cz/" class="link">aksm.cz</a> pro Asociaci
-        křesťanských spolků mládeže, z.s.
+        <a href="https://aksm.cz/" class="link" target="_blank">aksm.cz</a> pro
+        Asociaci křesťanských spolků mládeže, z.s.
         <ul class="sub-list">
           <li class="item">
             V současnosti probíhá nepravidelná spolupráce na dalším vývoji a
@@ -68,8 +87,8 @@
     <ul class="information technologies">
       <li class="item">
         V rámci svých projektů jsem nasbíral zkušenosti s těmito technologiemi:
-        HTML5, CSS3, Sass, JS, jQuery, Vue.js, PHP, Twig, RS Drupal, RS
-        Wordpress, práce s API
+        HTML5, CSS3, Sass, JS, jQuery, Vue.js, PHP, Twig, RS Drupal, Wordpress,
+        jNetPublish, práce s API
       </li>
       <li class="item">
         Mimoto dbám na responzivitu (mobile first) a přehledné UI.
