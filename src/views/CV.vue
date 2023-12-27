@@ -21,7 +21,7 @@
       <li class="item">
         <u>květen 2023 - současnost</u>, <a href="https://www.websta.cz" class="link" target="_blank">Websta Solutions
           s.r.o.</a>,
-        pozice fronted developer, vývoj SPA aplikací postavených na Laravel & Vue.js, tvorba statických komponent pro
+        pozice frontend developer, vývoj SPA aplikací postavených na Laravel & Vue.js, tvorba statických komponent pro
         interní CMS
       </li>
 
