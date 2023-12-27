@@ -1,5 +1,5 @@
 <template>
-  <Menu />
+  <Menu></Menu>
   <Loader />
   <router-view v-slot="{ Component }">
     <transition name="route" mode="out-in">
@@ -9,9 +9,9 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import Loader from "@/components/Loader.vue";
-import Menu from "@/components/Menu.vue";
+import { RouterView } from 'vue-router';
+import Loader from './components/Loader.vue';
+import Menu from './components/Menu.vue';
 
 export default {
   components: {
@@ -45,13 +45,16 @@ export default {
   opacity: 0;
   transform: translateX(100px);
 }
+
 .route-enter-active {
   transition: all 0.3s ease-out;
 }
+
 .route-leave-to {
   opacity: 0;
   transform: translateX(-100px);
 }
+
 .route-leave-active {
   transition: all 0.3s ease-in;
 }

@@ -13,8 +13,8 @@
 
 <script>
 import axios from "axios";
-import ProjectCard from "@/components/ProjectCard";
-import ProjectsClose from "@/components/ProjectsClose";
+import ProjectCard from './ProjectCard.vue';
+import ProjectsClose from './ProjectsClose.vue';
 
 export default {
   components: {
@@ -46,8 +46,8 @@ export default {
             axios
               .get(
                 `https://raw.githubusercontent.com/konmike/` +
-                  el.name +
-                  `/master/README.md`
+                el.name +
+                `/master/README.md`
               )
               .then((readme) => {
                 this.projects.push({

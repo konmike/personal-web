@@ -3,20 +3,16 @@
     <symbol id="icon-folderback" viewBox="0 0 20 16">
       <title>folder-back</title>
       <path
-        d="M7.5,0C7.4,0,2,0,2,0C0.9,0,0,0.9,0,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4c0-1.1-0.9-2-2-2c0,0-7.5,0-8,0C9,2,9.9,0,7.5,0z"
-      />
+        d="M7.5,0C7.4,0,2,0,2,0C0.9,0,0,0.9,0,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4c0-1.1-0.9-2-2-2c0,0-7.5,0-8,0C9,2,9.9,0,7.5,0z" />
     </symbol>
     <symbol id="icon-foldercover" viewBox="0 0 20 16">
       <title>folder-cover</title>
-      <path
-        d="M2,2h16c1.1,0,2,0.9,2,2v10c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2V4C0,2.9,0.9,2,2,2z"
-      />
+      <path d="M2,2h16c1.1,0,2,0.9,2,2v10c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2V4C0,2.9,0.9,2,2,2z" />
     </symbol>
     <symbol id="icon-padlock" viewBox="0 0 24 33.6">
       <title>padlock</title>
       <path
-        d="M23,13.5h-1.7V9.4C21.4,4.2,17.2,0,12,0C6.8,0,2.6,4.2,2.6,9.4v4.1H1c-0.5,0-1,0.4-1,1v18.2c0,0.5,0.4,1,1,1H23c0.5,0,1-0.4,1-1V14.4C24,13.9,23.6,13.5,23,13.5z M13.5,24.5v3.9c0,0.3-0.3,0.6-0.6,0.6h-1.8c-0.3,0-0.6-0.3-0.6-0.6v-3.9c-0.7-0.5-1.1-1.3-1.1-2.1c0-1.4,1.2-2.6,2.6-2.6c1.4,0,2.6,1.2,2.6,2.6C14.6,23.3,14.2,24.1,13.5,24.5z M16.9,13.5H7.1V9.4c0-2.7,2.2-4.9,4.9-4.9c2.7,0,4.9,2.2,4.9,4.9V13.5z"
-      />
+        d="M23,13.5h-1.7V9.4C21.4,4.2,17.2,0,12,0C6.8,0,2.6,4.2,2.6,9.4v4.1H1c-0.5,0-1,0.4-1,1v18.2c0,0.5,0.4,1,1,1H23c0.5,0,1-0.4,1-1V14.4C24,13.9,23.6,13.5,23,13.5z M13.5,24.5v3.9c0,0.3-0.3,0.6-0.6,0.6h-1.8c-0.3,0-0.6-0.3-0.6-0.6v-3.9c-0.7-0.5-1.1-1.3-1.1-2.1c0-1.4,1.2-2.6,2.6-2.6c1.4,0,2.6,1.2,2.6,2.6C14.6,23.3,14.2,24.1,13.5,24.5z M16.9,13.5H7.1V9.4c0-2.7,2.2-4.9,4.9-4.9c2.7,0,4.9,2.2,4.9,4.9V13.5z" />
     </symbol>
   </svg>
 
@@ -30,28 +26,15 @@
       </div>
       <div class="folder__icon-deco"></div>
       <div class="folder__preview folder__preview--thumbs">
-        <img
-          class="folder__thumb"
-          src="../assets/project-preview/pf-screen-sm.png"
-        />
-        <img
-          class="folder__thumb"
-          src="../assets/project-preview/srdce-screen.png"
-        />
-        <img
-          class="folder__thumb"
-          src="../assets/project-preview/screenshot-micro.png"
-        />
+        <img class="folder__thumb" src="../assets/project-preview/pf-screen-sm.png" />
+        <img class="folder__thumb" src="../assets/project-preview/srdce-screen.png" />
+        <img class="folder__thumb" src="../assets/project-preview/screenshot-micro.png" />
       </div>
       <div class="folder__icon-img folder__icon-img--cover">
         <svg class="folder__icon-svg">
           <use xlink:href="#icon-foldercover"></use>
         </svg>
-        <img
-          class="project-icon"
-          src="../assets/project-icon-yellow.png"
-          alt="Projects"
-        />
+        <img class="project-icon" src="../assets/project-icon-yellow.png" alt="Projects" />
       </div>
     </div>
     <h3 class="folder__caption">Projekty</h3>
@@ -59,19 +42,17 @@
 </template>
 
 <script>
-import anime from "@/js/anime.min.js";
+import anime from 'animejs/lib/anime.es.js';
 
 export default {
   methods: {
     toggleProject() {
-      // console.log("Toggle - folder");
       this.emitter.emit("show-projects", true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
   },
   mounted() {
     //https://github.com/codrops/FolderPreviewIdeas
-
     (function (window) {
       /**
        * FolderFx obj.

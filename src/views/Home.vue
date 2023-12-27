@@ -10,9 +10,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import FolderProjects from "@/components/FolderProjects.vue";
-import ProjectsFeed from "@/components/ProjectsFeed.vue";
+import FolderProjects from '../components/FolderProjects.vue';
+import ProjectsFeed from '../components/ProjectsFeed.vue';
 
 export default {
   name: "Home",
