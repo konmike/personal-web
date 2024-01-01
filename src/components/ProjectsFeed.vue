@@ -12,74 +12,76 @@
 </template>
 
 <script>
-import axios from "axios";
-import ProjectCard from './ProjectCard.vue';
-import ProjectsClose from './ProjectsClose.vue';
+import axios from 'axios'
+import ProjectCard from './ProjectCard.vue'
+import ProjectsClose from './ProjectsClose.vue'
 
 export default {
   components: {
     ProjectsClose,
-    ProjectCard,
+    ProjectCard
   },
-  data() {
+  data () {
     return {
       show: false,
-      projects: [],
-    };
+      projects: []
+    }
   },
   methods: {
-    getTitle(data) {
-      const arr = data.split("\n");
-      return arr[0].replace("#", "").trim();
-    },
+    getTitle (data) {
+      const arr = data.split('\n')
+      return arr[0].replace('#', '').trim()
+    }
   },
 
-  mounted() {
-    this.emitter.on("show-projects", (data) => {
-      this.show = data;
+  mounted () {
+    this.emitter.on('show-projects', data => {
+      this.show = data
 
-      if (this.projects.length != 0) return;
+      if (this.projects.length != 0) return
       axios
         .get(`https://api.github.com/users/konmike/repos`)
-        .then((res) => {
-          res.data.forEach((el) => {
+        .then(res => {
+          res.data.forEach(el => {
             axios
               .get(
                 `https://raw.githubusercontent.com/konmike/` +
-                el.name +
-                `/master/README.md`
+                  el.name +
+                  `/master/README.md`
               )
-              .then((readme) => {
-                this.projects.push({
-                  id: el.id,
-                  title: this.getTitle(readme.data),
-                  name: el.name,
-                  description: el.description,
-                  githubUrl: el.html_url,
-                  link: el.homepage,
-                  tags: el.topics,
-                  left: true,
-                });
+              .then(readme => {
+                if (el.description && el.topics && el.topics.length > 0) {
+                  this.projects.push({
+                    id: el.id,
+                    title: this.getTitle(readme.data),
+                    name: el.name,
+                    description: el.description,
+                    githubUrl: el.html_url,
+                    link: el.homepage,
+                    tags: el.topics,
+                    left: true
+                  })
+                }
 
                 this.projects.sort((a, b) => {
-                  return Number(b.id) - Number(a.id);
-                });
+                  return Number(b.id) - Number(a.id)
+                })
 
-                let left = true;
-                this.projects.forEach((element) => {
-                  element.left = left;
-                  left = !left;
-                });
+                let left = true
+                this.projects.forEach(element => {
+                  element.left = left
+                  left = !left
+                })
               })
-              .catch((err) => {
-                console.log(err);
-              });
-          });
+              .catch(err => {
+                console.log(err)
+              })
+          })
         })
-        .catch((error) => {
-          console.log(error);
-        });
-    });
-  },
-};
+        .catch(error => {
+          console.log(error)
+        })
+    })
+  }
+}
 </script>
