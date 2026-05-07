@@ -1,18 +1,20 @@
-.home {
-  display: flex;
-  flex-direction: column;
-  // justify-content: space-between;
-  row-gap: 1.5em;
+@use '../abstracts' as *;
 
-  .title {
-    margin-bottom: 0.15em;
+.page-home {
+  .hero {
+    padding: 30px 0 12px;
+
+    h1 {
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+      max-width: 480px;
+    }
   }
 
-  .subtitle {
-    background-image: url("../img/brush.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-inline: 0.5em;
+  .projects-section {
+    padding-top: 40px;
   }
 }

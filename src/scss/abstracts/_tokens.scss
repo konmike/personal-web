@@ -1,0 +1,22 @@
+:root {
+  --bg: #F4EFE6;
+  --text: #10101F;
+  --muted: #6B6760;
+  --accent: #A53E22;
+  --drawer-bg: #3A312A;
+  --drawer-border: #5C5048;
+  --hairline: rgba(16, 16, 31, 0.12);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  --nav-height: 88px;
+  --pad-x: 56px;
+  --pad-x-mobile: 24px;
+  --drawer-width: 660px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pad-x: 24px;
+  }
+}

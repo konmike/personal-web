@@ -1,27 +1,114 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Michal Konečný — frontend developer. Stavím rychlé, čisté a udržitelné weby s důrazem na detail.">
+  <meta property="og:title" content="Michal Konečný | Frontend developer">
+  <meta property="og:description" content="Stavím rychlé, čisté a udržitelné weby s důrazem na detail.">
+  <meta property="og:type" content="website">
+  <title>Michal Konečný | Frontend developer</title>
   <link rel="icon" href="/favicon/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
   <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="stylesheet" href="/css/main.min.css">
-  <title>Michal Konečný | Frontend kodér</title>
+  <link rel="stylesheet" href="/src/scss/main.scss">
 </head>
-
 <body>
-  <noscript>
-    <strong>We're sorry but Michal Konečný | Frontend kodér doesn't work properly without JavaScript enabled. Please
-      enable it to continue.</strong>
-  </noscript>
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
-</body>
+  <div class="site-wrapper">
+    <header>
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <a href="/" class="site-nav__logo" aria-label="Domů">
+          <img src="/img/coder-dark.webp" alt="Michal Konečný" width="36" height="36">
+        </a>
+        <ul class="site-nav__links" role="list">
+          <li><a href="/" aria-current="page">Projekty</a></li>
+          <li><a href="/cv.html">CV</a></li>
+          <li><a href="/contact.html">Kontakt</a></li>
+        </ul>
+        <button
+          class="site-nav__hamburger"
+          id="menu-toggle"
+          aria-label="Otevřít menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+    <div class="hairline" aria-hidden="true"></div>
 
+    <main class="site-content page-home">
+      <section class="hero">
+        <h1>Michal Konečný</h1>
+        <p>Máte frontend? A mohl bych ho vidět?</p>
+      </section>
+
+      <section class="projects-section" aria-labelledby="projects-heading">
+        <p class="eyebrow" id="projects-heading">Vybrané projekty</p>
+
+        <ul class="project-list" id="project-list" role="list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <!-- Project detail drawer -->
+  <aside
+    class="drawer"
+    id="drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Detail projektu"
+    tabindex="-1"
+  >
+    <div class="drawer__header">
+      <div>
+        <p class="drawer__eyebrow" id="drawer-eyebrow"></p>
+        <h2 class="drawer__title" id="drawer-title"></h2>
+      </div>
+      <button class="drawer__close" id="drawer-close" aria-label="Zavřít detail">&times;</button>
+    </div>
+    <div class="drawer__body">
+      <p class="drawer__meta" id="drawer-meta"></p>
+      <p class="drawer__desc" id="drawer-desc"></p>
+      <div class="drawer__tags" id="drawer-tags"></div>
+      <div class="drawer__actions">
+        <a class="btn btn--primary hidden" id="drawer-demo" href="#" target="_blank" rel="noopener noreferrer">Live demo &rarr;</a>
+        <a class="btn btn--outline hidden" id="drawer-repo" href="#" target="_blank" rel="noopener noreferrer">Repo</a>
+      </div>
+    </div>
+    <footer class="drawer__footer">
+      <button class="drawer__nav-btn hidden" id="drawer-prev">
+        &larr; <span id="drawer-prev-label"></span>
+      </button>
+      <button class="drawer__nav-btn drawer__nav-btn--next hidden" id="drawer-next">
+        <span id="drawer-next-label"></span> &rarr;
+      </button>
+    </footer>
+  </aside>
+
+  <div class="drawer-overlay" id="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobilní menu">
+    <div class="mobile-menu__top">
+      <a href="/" class="logo" aria-label="Domů">
+        <img src="/img/coder-white.webp" alt="Michal Konečný" width="36" height="36">
+      </a>
+      <button id="menu-close" aria-label="Zavřít menu">&times;</button>
+    </div>
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="/" aria-current="page">Projekty</a></li>
+      <li><a href="/cv.html">CV</a></li>
+      <li><a href="/contact.html">Kontakt</a></li>
+    </ul>
+  </div>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
 </html>

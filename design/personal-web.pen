@@ -1,0 +1,4104 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    },
+    {
+      "type": "frame",
+      "id": "Ea870",
+      "x": 860,
+      "y": 0,
+      "name": "Home Light",
+      "width": 1440,
+      "fill": "#F4EFE6",
+      "layout": "vertical",
+      "gap": 28,
+      "padding": [
+        28,
+        56,
+        40,
+        56
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "6XJBk",
+          "name": "nav",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "bwNxy",
+              "name": "logo",
+              "width": 52,
+              "height": 52,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "../Downloads/coder-dark.webp",
+                "mode": "fit"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "Bfb2Q",
+              "name": "menu",
+              "gap": 28,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "70nbA",
+                  "name": "m1",
+                  "fill": "#101010",
+                  "content": "Projekty",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "9JX0h",
+                  "name": "m2",
+                  "fill": "#6E6A60",
+                  "content": "CV",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "9rgNA",
+                  "name": "m3",
+                  "fill": "#6E6A60",
+                  "content": "Kontakt",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "0NZ3r",
+          "name": "hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            30,
+            0,
+            12,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "8ZzOQ",
+              "name": "title",
+              "fill": "#101010",
+              "content": "Michal Konecny",
+              "lineHeight": 0.95,
+              "fontFamily": "Poppins",
+              "fontSize": 104,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "PrrlV",
+              "name": "sub",
+              "fill": "#6E6A60",
+              "textGrowth": "fixed-width",
+              "width": 760,
+              "content": "Frontend developer. Stavim rychle, ciste a udrzitelne weby s durazem na detail.",
+              "fontFamily": "Manrope",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "fbCOa",
+          "name": "sec",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "kZnr3",
+              "name": "secT",
+              "fill": "#6E6A60",
+              "content": "VYBRANE PROJEKTY — 2024 / 2025",
+              "fontFamily": "Poppins",
+              "fontSize": 13,
+              "fontWeight": "600",
+              "letterSpacing": 3
+            },
+            {
+              "type": "frame",
+              "id": "WsOl6",
+              "name": "projList",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "5kb1K",
+                  "name": "row1",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    28,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "LRxDF",
+                      "name": "top1",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "UYaJf",
+                          "fill": "#101010",
+                          "content": "E-commerce redesign",
+                          "fontFamily": "Poppins",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "CR3Ch",
+                          "fill": "#6E6A60",
+                          "content": "2025 — Vue 3 / Tailwind",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "T74h2",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Design system, Vue komponenty, optimalizace CLS a LCP.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DeJiU",
+                  "name": "row2",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    28,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wzSff",
+                      "name": "top2",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "kTfXp",
+                          "fill": "#101010",
+                          "content": "CMS portal",
+                          "fontFamily": "Poppins",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "GLoTE",
+                          "fill": "#6E6A60",
+                          "content": "2024 — Vue / Laravel",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "kLXIN",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Admin workflow, custom tabulky a SEO metadata pipeline.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "H6BL7",
+                  "name": "row3",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    28,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ck973",
+                      "name": "top3",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "2hjdf",
+                          "fill": "#101010",
+                          "content": "REST Countries API",
+                          "fontFamily": "Poppins",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "YnZdC",
+                          "fill": "#6E6A60",
+                          "content": "2024 — Vue 3 / TS / SEO",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "AgITH",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Filtrovani dat, optimalizace renderu a SSR metadata pro social share.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "qh3v3",
+                  "name": "row4",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1,
+                      "bottom": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    28,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wAsK4",
+                      "name": "top4",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FQavt",
+                          "fill": "#101010",
+                          "content": "Firemni microsite",
+                          "fontFamily": "Poppins",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fk2Dh",
+                          "fill": "#6E6A60",
+                          "content": "2024 — Astro / Tailwind",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "GI1GF",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Landing page s motion detaily a CMS pro marketingovy tym.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Aeni3",
+      "x": 2360,
+      "y": 0,
+      "name": "CV Light",
+      "width": 1440,
+      "fill": "#F4EFE6",
+      "layout": "vertical",
+      "gap": 26,
+      "padding": [
+        28,
+        56,
+        40,
+        56
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "6ujVc",
+          "name": "cvNav",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Y2dv5",
+              "name": "logo",
+              "width": 52,
+              "height": 52,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "../Downloads/coder-dark.webp",
+                "mode": "fit"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "97FUw",
+              "name": "cvMenu",
+              "gap": 28,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "u4IvQ",
+                  "name": "cvM1",
+                  "fill": "#6E6A60",
+                  "content": "Projekty",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "lxzLm",
+                  "name": "cvM2",
+                  "fill": "#101010",
+                  "content": "CV",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "8MVyB",
+                  "name": "cvM3",
+                  "fill": "#6E6A60",
+                  "content": "Kontakt",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "3M6ne",
+          "name": "cvHero",
+          "layout": "vertical",
+          "gap": 10,
+          "padding": [
+            18,
+            0,
+            4,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "VtZ4y",
+              "name": "cvT",
+              "fill": "#101010",
+              "content": "CV & dovednosti",
+              "lineHeight": 0.95,
+              "fontFamily": "Poppins",
+              "fontSize": 88,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "o0TGE",
+              "name": "cvS",
+              "fill": "#6E6A60",
+              "textGrowth": "fixed-width",
+              "width": 840,
+              "content": "Strucny prehled vzdelani, praxe a stacku, se kterym dodavam projekty.",
+              "fontFamily": "Manrope",
+              "fontSize": 20,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GonaY",
+          "name": "cvBody",
+          "width": "fill_container",
+          "gap": 80,
+          "padding": [
+            40,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "wvvMx",
+              "name": "left",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lDeVh",
+                  "name": "expHead",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    0,
+                    0,
+                    16,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "6nO2e",
+                      "fill": "#A53E22",
+                      "content": "PRAXE",
+                      "fontFamily": "Poppins",
+                      "fontSize": 13,
+                      "fontWeight": "700",
+                      "letterSpacing": 3
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UZAI8",
+                  "name": "e1",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#1A1A1A"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    24,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "3NcqH",
+                      "name": "e1Top",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SSfxs",
+                          "fill": "#101010",
+                          "content": "Websta Solutions",
+                          "fontFamily": "Poppins",
+                          "fontSize": 26,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kfFMN",
+                          "fill": "#6E6A60",
+                          "content": "2023 — dosud",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "uveiu",
+                      "fill": "#A53E22",
+                      "content": "Frontend developer",
+                      "fontFamily": "Poppins",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r1e9B",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Vue SPA aplikace, Laravel integrace, interni CMS komponenty a vykonostni audit.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "510XX",
+                  "name": "e2",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1,
+                      "bottom": 1
+                    },
+                    "fill": "#1A1A1A"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    24,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gd60k",
+                      "name": "e2Top",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Eklti",
+                          "fill": "#101010",
+                          "content": "Etnetera Core",
+                          "fontFamily": "Poppins",
+                          "fontSize": 26,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "d77Fv",
+                          "fill": "#6E6A60",
+                          "content": "2022 — 2023",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "YMoMC",
+                      "fill": "#A53E22",
+                      "content": "Frontend developer",
+                      "fontFamily": "Poppins",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "J05nl",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Redesign o2.cz, staticke komponenty a iNetPublish support.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "HVcGP",
+              "name": "right",
+              "width": 420,
+              "layout": "vertical",
+              "gap": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "voAcJ",
+                  "name": "sk",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 18,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iKJOL",
+                      "fill": "#A53E22",
+                      "content": "STACK",
+                      "fontFamily": "Poppins",
+                      "fontSize": 13,
+                      "fontWeight": "700",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "FCJJL",
+                      "fill": "#101010",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Vue 3 · TypeScript · JS ESNext",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RQzh5",
+                      "fill": "#101010",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "SCSS · Tailwind · design systems",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cYCOU",
+                      "fill": "#101010",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "SEO · schema.org · Core Web Vitals",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dszdC",
+                  "name": "edu",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jfoKy",
+                      "fill": "#A53E22",
+                      "content": "VZDELANI",
+                      "fontFamily": "Poppins",
+                      "fontSize": 13,
+                      "fontWeight": "700",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jpJ7l",
+                      "name": "eduRow",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "CngDk",
+                          "fill": "#101010",
+                          "content": "CVUT FIT",
+                          "fontFamily": "Poppins",
+                          "fontSize": 22,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Iu0KW",
+                          "fill": "#6E6A60",
+                          "content": "Bc. 2020",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "GtEBb",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Webove a softwarove inzenyrstvi",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "A0aJz",
+      "x": 3860,
+      "y": 0,
+      "name": "Contact Light",
+      "width": 1440,
+      "height": 1024,
+      "fill": "#F4EFE6",
+      "layout": "vertical",
+      "gap": 26,
+      "padding": [
+        28,
+        56,
+        40,
+        56
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "4s9C6",
+          "name": "coNav",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "yvEV7",
+              "name": "logo",
+              "width": 52,
+              "height": 52,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "../Downloads/coder-dark.webp",
+                "mode": "fit"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "682e0",
+              "name": "coM",
+              "gap": 28,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "kWTz9",
+                  "name": "coM1",
+                  "fill": "#6E6A60",
+                  "content": "Projekty",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "ng9bR",
+                  "name": "coM2",
+                  "fill": "#6E6A60",
+                  "content": "CV",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "GTbyl",
+                  "name": "coM3",
+                  "fill": "#101010",
+                  "content": "Kontakt",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "TbVxv",
+          "name": "coWrap",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 20,
+          "padding": [
+            120,
+            0,
+            0,
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "JLi2I",
+              "name": "coT",
+              "fill": "#101010",
+              "textGrowth": "fixed-width",
+              "width": 1000,
+              "content": "Mate zajem o spolupraci?",
+              "lineHeight": 0.95,
+              "textAlign": "center",
+              "fontFamily": "Poppins",
+              "fontSize": 88,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "VRVnI",
+              "name": "coS",
+              "fill": "#6E6A60",
+              "content": "Napis mi a muzeme probrat projekt i technicke detaily.",
+              "fontFamily": "Manrope",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "3D2JG",
+              "name": "mail",
+              "fill": "#A53E22",
+              "padding": [
+                16,
+                24
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "dHhOS",
+                  "name": "mailt",
+                  "fill": "#F4EFE6",
+                  "content": "info@konecnymichal.cz",
+                  "fontFamily": "Manrope",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DLZcz",
+              "name": "icons",
+              "gap": 16,
+              "padding": [
+                8,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pt7ns",
+                  "name": "li",
+                  "fill": "#F4EFE600",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#1A1A1A"
+                  },
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "M5mM0",
+                      "name": "lit",
+                      "fill": "#101010",
+                      "content": "LinkedIn",
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "baeTc",
+                  "name": "gh",
+                  "fill": "#F4EFE600",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#1A1A1A"
+                  },
+                  "padding": [
+                    14,
+                    18
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KwgSQ",
+                      "name": "ght",
+                      "fill": "#101010",
+                      "content": "GitHub",
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Xr3ij",
+      "x": 5400,
+      "y": 0,
+      "name": "Home + Detail",
+      "clip": true,
+      "width": 1440,
+      "height": 1024,
+      "fill": "#F4EFE6",
+      "layout": "vertical",
+      "gap": 28,
+      "padding": [
+        28,
+        56,
+        40,
+        56
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "dpVmc",
+          "name": "nav",
+          "width": 1328,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "tubuQ",
+              "name": "logo",
+              "width": 52,
+              "height": 52,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "../Downloads/coder-dark.webp",
+                "mode": "fit"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "aHJ4C",
+              "name": "menu",
+              "gap": 28,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "6FeJz",
+                  "name": "m1",
+                  "fill": "#101010",
+                  "content": "Projekty",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "Shqj1",
+                  "name": "m2",
+                  "fill": "#6E6A60",
+                  "content": "CV",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "WGASt",
+                  "name": "m3",
+                  "fill": "#6E6A60",
+                  "content": "Kontakt",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HnJO3",
+          "name": "hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            30,
+            0,
+            12,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "EOmkt",
+              "name": "title",
+              "fill": "#101010",
+              "content": "Michal Konecny",
+              "lineHeight": 0.95,
+              "fontFamily": "Poppins",
+              "fontSize": 104,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "XMLE5",
+              "name": "sub",
+              "fill": "#6E6A60",
+              "textGrowth": "fixed-width",
+              "width": 760,
+              "content": "Frontend developer. Stavim rychle, ciste a udrzitelne weby s durazem na detail.",
+              "fontFamily": "Manrope",
+              "fontSize": 22,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "IRhRc",
+          "name": "sec",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "llxtE",
+              "name": "secT",
+              "fill": "#6E6A60",
+              "content": "VYBRANE PROJEKTY — 2024 / 2025",
+              "fontFamily": "Poppins",
+              "fontSize": 13,
+              "fontWeight": "600",
+              "letterSpacing": 3
+            },
+            {
+              "type": "frame",
+              "id": "n9pMC",
+              "name": "projList",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BYhBk",
+                  "name": "row1",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    28,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EayG3",
+                      "name": "top1",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "83ida",
+                          "fill": "#101010",
+                          "content": "E-commerce redesign",
+                          "fontFamily": "Poppins",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "th57q",
+                          "fill": "#6E6A60",
+                          "content": "2025 — Vue 3 / Tailwind",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "GFlnv",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Design system, Vue komponenty, optimalizace CLS a LCP.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BjnZh",
+                  "name": "row2",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    28,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "gDOpj",
+                      "name": "top2",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "mDjzx",
+                          "fill": "#101010",
+                          "content": "CMS portal",
+                          "fontFamily": "Poppins",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "5KANM",
+                          "fill": "#6E6A60",
+                          "content": "2024 — Vue / Laravel",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "S3Yrz",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Admin workflow, custom tabulky a SEO metadata pipeline.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "a81qs",
+                  "name": "row3",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 2
+                    },
+                    "fill": "#A53E22"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    28,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DkSnA",
+                      "name": "top3",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZdKYU",
+                          "fill": "#A53E22",
+                          "content": "REST Countries API",
+                          "fontFamily": "Poppins",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "5B78v",
+                          "fill": "#6E6A60",
+                          "content": "2024 — Vue 3 / TS / SEO",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "hvdHg",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Filtrovani dat, optimalizace renderu a SSR metadata pro social share.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZgD27",
+                  "name": "row4",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1,
+                      "bottom": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    28,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vWXUI",
+                      "name": "top4",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "h6htO",
+                          "fill": "#101010",
+                          "content": "Firemni microsite",
+                          "fontFamily": "Poppins",
+                          "fontSize": 36,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7VNsB",
+                          "fill": "#6E6A60",
+                          "content": "2024 — Astro / Tailwind",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "aMnjz",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Landing page s motion detaily a CMS pro marketingovy tym.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "YyRMH",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 88,
+          "name": "hairline",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 270,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#F4EFE600",
+                "position": 0
+              },
+              {
+                "color": "#A53E22",
+                "position": 1
+              }
+            ]
+          },
+          "width": 1440,
+          "height": 3
+        },
+        {
+          "type": "frame",
+          "id": "dcud7",
+          "layoutPosition": "absolute",
+          "x": 780,
+          "y": 88,
+          "name": "drawer",
+          "clip": true,
+          "width": 660,
+          "height": 936,
+          "fill": "#3A312A",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "left": 4
+            },
+            "fill": "#A53E22"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#10101033",
+            "offset": {
+              "x": -30,
+              "y": 0
+            },
+            "blur": 50
+          },
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "FBpHt",
+              "name": "img",
+              "width": "fill_container",
+              "height": 300,
+              "fill": "#4A4038"
+            },
+            {
+              "type": "frame",
+              "id": "WlKmo",
+              "name": "content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 36,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lKpB5",
+                  "name": "topBar",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zdedH",
+                      "fill": "#A53E22",
+                      "content": "03 / DETAIL",
+                      "fontFamily": "Poppins",
+                      "fontSize": 13,
+                      "fontWeight": "700",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "oVwzE",
+                      "fill": "#F4EFE6",
+                      "content": "✕",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "ej1gj",
+                  "fill": "#F4EFE6",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "REST Countries API",
+                  "lineHeight": 1,
+                  "fontFamily": "Poppins",
+                  "fontSize": 44,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "uBZS7",
+                  "fill": "#9A9A95",
+                  "content": "2024 — klientsky projekt",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "O9f1C",
+                  "fill": "#C9C5B6",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Napojeni na verejne REST API. Filtrovani dat na klientovi, optimalizace renderovani seznamu zemi a SSR metadata pro social share. Lighthouse 99/100.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Manrope",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "hLZh2",
+                  "name": "tags",
+                  "gap": 8,
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "T3rvJ",
+                      "name": "tag1",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#5C5048"
+                      },
+                      "padding": [
+                        8,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "R1ymq",
+                          "fill": "#F4EFE6",
+                          "content": "Vue 3",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wzfKp",
+                      "name": "tag2",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#5C5048"
+                      },
+                      "padding": [
+                        8,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "UTpKZ",
+                          "fill": "#F4EFE6",
+                          "content": "TypeScript",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "MMlHJ",
+                      "name": "tag3",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#5C5048"
+                      },
+                      "padding": [
+                        8,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Pyp8t",
+                          "fill": "#F4EFE6",
+                          "content": "SEO",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "XsG27",
+                  "name": "links",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "DIhYo",
+                      "name": "live",
+                      "fill": "#A53E22",
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "65MIl",
+                          "fill": "#F4EFE6",
+                          "content": "Live demo →",
+                          "fontFamily": "Poppins",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "enCXR",
+                      "name": "repo",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#F4EFE6"
+                      },
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nrL3o",
+                          "fill": "#F4EFE6",
+                          "content": "Repo",
+                          "fontFamily": "Poppins",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Q95PB",
+              "layoutPosition": "absolute",
+              "x": 0,
+              "y": 836,
+              "name": "navBar",
+              "width": 660,
+              "height": 100,
+              "fill": "#3A312A",
+              "stroke": {
+                "align": "inside",
+                "thickness": {
+                  "top": 1
+                },
+                "fill": "#5C5048"
+              },
+              "padding": [
+                28,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "17qyk",
+                  "name": "prevBtn",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "lFj47",
+                      "fill": "#A53E22",
+                      "content": "↑",
+                      "fontFamily": "Manrope",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "0PL4e",
+                      "name": "prevText",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "AjJZE",
+                          "fill": "#8B847A",
+                          "content": "PREDCHOZI",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "YQzjh",
+                          "fill": "#F4EFE6",
+                          "content": "CMS portal",
+                          "fontFamily": "Poppins",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "D95as",
+                  "fill": "#5C5048",
+                  "width": 1,
+                  "height": 48
+                },
+                {
+                  "type": "frame",
+                  "id": "7VnZk",
+                  "name": "nextBtn",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "justifyContent": "end",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "GtvLB",
+                      "name": "nextText",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xDpWM",
+                          "fill": "#8B847A",
+                          "content": "DALSI",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "EI9Vs",
+                          "fill": "#F4EFE6",
+                          "content": "Firemni microsite",
+                          "fontFamily": "Poppins",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "5IzET",
+                      "fill": "#A53E22",
+                      "content": "↓",
+                      "fontFamily": "Manrope",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "qGL64",
+      "x": 6940,
+      "y": 0,
+      "name": "Home + Detail (responsive)",
+      "clip": true,
+      "width": 1440,
+      "height": 1024,
+      "fill": "#F4EFE6",
+      "layout": "vertical",
+      "gap": 28,
+      "padding": [
+        28,
+        720,
+        40,
+        56
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "EDwfR",
+          "name": "nav",
+          "width": 1328,
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "LY4Hf",
+              "name": "logo",
+              "width": 52,
+              "height": 52,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "../Downloads/coder-dark.webp",
+                "mode": "fit"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "cMduO",
+              "name": "menu",
+              "gap": 28,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EWsN9",
+                  "name": "m1",
+                  "fill": "#101010",
+                  "content": "Projekty",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "GaAnS",
+                  "name": "m2",
+                  "fill": "#6E6A60",
+                  "content": "CV",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "z0g5A",
+                  "name": "m3",
+                  "fill": "#6E6A60",
+                  "content": "Kontakt",
+                  "fontFamily": "Poppins",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "tX77H",
+          "name": "hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            30,
+            0,
+            12,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "mSfjC",
+              "name": "title",
+              "fill": "#101010",
+              "content": "Michal Konecny",
+              "lineHeight": 1,
+              "fontFamily": "Poppins",
+              "fontSize": 54,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "CnXsR",
+              "name": "sub",
+              "fill": "#6E6A60",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Frontend developer. Stavim rychle, ciste a udrzitelne weby s durazem na detail.",
+              "fontFamily": "Manrope",
+              "fontSize": 17,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Cnqsx",
+          "name": "sec",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            40,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "sr5qP",
+              "name": "secT",
+              "fill": "#6E6A60",
+              "content": "VYBRANE PROJEKTY — 2024 / 2025",
+              "fontFamily": "Poppins",
+              "fontSize": 13,
+              "fontWeight": "600",
+              "letterSpacing": 3
+            },
+            {
+              "type": "frame",
+              "id": "DJtJd",
+              "name": "projList",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RI9RF",
+                  "name": "row1",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "m2Rtb",
+                      "name": "top1",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fhYXm",
+                          "fill": "#101010",
+                          "content": "E-commerce redesign",
+                          "fontFamily": "Poppins",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "FuyLv",
+                          "fill": "#6E6A60",
+                          "content": "2025 — Vue 3 / Tailwind",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "00uWZ",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Design system, Vue komponenty, optimalizace CLS a LCP.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sPOOn",
+                  "name": "row2",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "TgSfp",
+                      "name": "top2",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iACg9",
+                          "fill": "#101010",
+                          "content": "CMS portal",
+                          "fontFamily": "Poppins",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "yJoaR",
+                          "fill": "#6E6A60",
+                          "content": "2024 — Vue / Laravel",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "qa21s",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Admin workflow, custom tabulky a SEO metadata pipeline.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UkJYe",
+                  "name": "row3",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 2
+                    },
+                    "fill": "#A53E22"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KFxs0",
+                      "name": "top3",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pjJp7",
+                          "fill": "#A53E22",
+                          "content": "REST Countries API",
+                          "fontFamily": "Poppins",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tmnrL",
+                          "fill": "#6E6A60",
+                          "content": "2024 — Vue 3 / TS / SEO",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "4zGDO",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Filtrovani dat, optimalizace renderu a SSR metadata pro social share.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "UraQD",
+                  "name": "row4",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1,
+                      "bottom": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "mYcYd",
+                      "name": "top4",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "01Q9T",
+                          "fill": "#101010",
+                          "content": "Firemni microsite",
+                          "fontFamily": "Poppins",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "8QpC8",
+                          "fill": "#6E6A60",
+                          "content": "2024 — Astro / Tailwind",
+                          "fontFamily": "Manrope",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "TJM6l",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Landing page s motion detaily a CMS pro marketingovy tym.",
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "4C6QC",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 88,
+          "name": "hairline",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 270,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#F4EFE600",
+                "position": 0
+              },
+              {
+                "color": "#A53E22",
+                "position": 1
+              }
+            ]
+          },
+          "width": 1440,
+          "height": 3
+        },
+        {
+          "type": "frame",
+          "id": "cqYu8",
+          "layoutPosition": "absolute",
+          "x": 780,
+          "y": 88,
+          "name": "drawer",
+          "clip": true,
+          "width": 660,
+          "height": 936,
+          "fill": "#3A312A",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "left": 4
+            },
+            "fill": "#A53E22"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#10101033",
+            "offset": {
+              "x": -30,
+              "y": 0
+            },
+            "blur": 50
+          },
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "BUdl9",
+              "name": "img",
+              "width": "fill_container",
+              "height": 300,
+              "fill": "#4A4038"
+            },
+            {
+              "type": "frame",
+              "id": "2pHWX",
+              "name": "content",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 14,
+              "padding": 36,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "xEEY7",
+                  "name": "topBar",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "urgkQ",
+                      "fill": "#A53E22",
+                      "content": "03 / DETAIL",
+                      "fontFamily": "Poppins",
+                      "fontSize": 13,
+                      "fontWeight": "700",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ryi7T",
+                      "fill": "#F4EFE6",
+                      "content": "✕",
+                      "fontFamily": "Manrope",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "SIeF8",
+                  "fill": "#F4EFE6",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "REST Countries API",
+                  "lineHeight": 1,
+                  "fontFamily": "Poppins",
+                  "fontSize": 44,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "UMm7L",
+                  "fill": "#9A9A95",
+                  "content": "2024 — klientsky projekt",
+                  "fontFamily": "Manrope",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Zf8Ht",
+                  "fill": "#C9C5B6",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Napojeni na verejne REST API. Filtrovani dat na klientovi, optimalizace renderovani seznamu zemi a SSR metadata pro social share. Lighthouse 99/100.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Manrope",
+                  "fontSize": 17,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "DpED3",
+                  "name": "tags",
+                  "gap": 8,
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "eDLaL",
+                      "name": "tag1",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#5C5048"
+                      },
+                      "padding": [
+                        8,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "eO7cJ",
+                          "fill": "#F4EFE6",
+                          "content": "Vue 3",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "7uEfR",
+                      "name": "tag2",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#5C5048"
+                      },
+                      "padding": [
+                        8,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yTqII",
+                          "fill": "#F4EFE6",
+                          "content": "TypeScript",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Tlet4",
+                      "name": "tag3",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#5C5048"
+                      },
+                      "padding": [
+                        8,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "E5nm6",
+                          "fill": "#F4EFE6",
+                          "content": "SEO",
+                          "fontFamily": "Manrope",
+                          "fontSize": 13,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "q6jE8",
+                  "name": "links",
+                  "gap": 10,
+                  "padding": [
+                    20,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "s08Jx",
+                      "name": "live",
+                      "fill": "#A53E22",
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ahap7",
+                          "fill": "#F4EFE6",
+                          "content": "Live demo →",
+                          "fontFamily": "Poppins",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "92H1x",
+                      "name": "repo",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#F4EFE6"
+                      },
+                      "padding": [
+                        12,
+                        18
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HValW",
+                          "fill": "#F4EFE6",
+                          "content": "Repo",
+                          "fontFamily": "Poppins",
+                          "fontSize": 14,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "JVX9v",
+              "layoutPosition": "absolute",
+              "x": 0,
+              "y": 836,
+              "name": "navBar",
+              "width": 660,
+              "height": 100,
+              "fill": "#3A312A",
+              "stroke": {
+                "align": "inside",
+                "thickness": {
+                  "top": 1
+                },
+                "fill": "#5C5048"
+              },
+              "padding": [
+                28,
+                0
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vMOS5",
+                  "name": "prevBtn",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ztzHh",
+                      "fill": "#A53E22",
+                      "content": "↑",
+                      "fontFamily": "Manrope",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oQk1l",
+                      "name": "prevText",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wC83t",
+                          "fill": "#8B847A",
+                          "content": "PREDCHOZI",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "v8MKc",
+                          "fill": "#F4EFE6",
+                          "content": "CMS portal",
+                          "fontFamily": "Poppins",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "tWuBF",
+                  "fill": "#5C5048",
+                  "width": 1,
+                  "height": 48
+                },
+                {
+                  "type": "frame",
+                  "id": "u6vkG",
+                  "name": "nextBtn",
+                  "width": "fill_container",
+                  "gap": 14,
+                  "padding": [
+                    0,
+                    16
+                  ],
+                  "justifyContent": "end",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "avnsk",
+                      "name": "nextText",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "e0uDq",
+                          "fill": "#8B847A",
+                          "content": "DALSI",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 2
+                        },
+                        {
+                          "type": "text",
+                          "id": "bZY6V",
+                          "fill": "#F4EFE6",
+                          "content": "Firemni microsite",
+                          "fontFamily": "Poppins",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "6rhmd",
+                      "fill": "#A53E22",
+                      "content": "↓",
+                      "fontFamily": "Manrope",
+                      "fontSize": 22,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "i6YPi",
+      "x": 860,
+      "y": 1200,
+      "name": "Mobile Home",
+      "width": 390,
+      "height": 1100,
+      "fill": "#F4EFE6",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        24,
+        24,
+        48,
+        24
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "mhIMW",
+          "name": "navM",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "FBsj9",
+              "name": "logo",
+              "width": 40,
+              "height": 40,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "../Downloads/coder-dark.webp",
+                "mode": "fit"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "Povnn",
+              "name": "burger",
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                0,
+                4,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "uxFfp",
+                  "fill": "#101010",
+                  "width": 22,
+                  "height": 1.5
+                },
+                {
+                  "type": "rectangle",
+                  "id": "5exDF",
+                  "fill": "#101010",
+                  "width": 22,
+                  "height": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "pADna",
+          "name": "hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            16,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "wTjOj",
+              "fill": "#101010",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Michal Konecny",
+              "lineHeight": 0.95,
+              "fontFamily": "Poppins",
+              "fontSize": 44,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "BcnUU",
+              "fill": "#6E6A60",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Frontend developer. Stavim rychle, ciste a udrzitelne weby s durazem na detail.",
+              "lineHeight": 1.5,
+              "fontFamily": "Manrope",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "LJBey",
+          "name": "sec",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": [
+            28,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "SAJuF",
+              "fill": "#6E6A60",
+              "content": "VYBRANE PROJEKTY — 2024 / 2025",
+              "fontFamily": "Poppins",
+              "fontSize": 11,
+              "fontWeight": "600",
+              "letterSpacing": 2.4
+            },
+            {
+              "type": "frame",
+              "id": "FNPtt",
+              "name": "projList",
+              "width": "fill_container",
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "T9NdM",
+                  "name": "row1",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    22,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hWpvD",
+                      "name": "top1",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "u38Lp",
+                          "fill": "#101010",
+                          "content": "E-commerce redesign",
+                          "fontFamily": "Poppins",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "vqBY3",
+                          "fill": "#6E6A60",
+                          "content": "2025",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 1.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Rq1oo",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Design system, Vue komponenty, optimalizace CLS a LCP.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HLPuK",
+                  "name": "row2",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    22,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nEHBB",
+                      "name": "top2",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GhH40",
+                          "fill": "#101010",
+                          "content": "CMS portal",
+                          "fontFamily": "Poppins",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TeNBg",
+                          "fill": "#6E6A60",
+                          "content": "2024",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 1.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "fM7HX",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Admin workflow, custom tabulky a SEO metadata pipeline.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G9iBm",
+                  "name": "row3",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    22,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UM7Wz",
+                      "name": "top3",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NOy1Q",
+                          "fill": "#101010",
+                          "content": "REST Countries API",
+                          "fontFamily": "Poppins",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7lzdi",
+                          "fill": "#6E6A60",
+                          "content": "2024",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 1.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "KTVGM",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Filtrovani dat, optimalizace renderu a SSR metadata pro social share.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ziBPY",
+                  "name": "row4",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1,
+                      "bottom": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 6,
+                  "padding": [
+                    22,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "wGfcq",
+                      "name": "top4",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "hrVWy",
+                          "fill": "#101010",
+                          "content": "Firemni microsite",
+                          "fontFamily": "Poppins",
+                          "fontSize": 18,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "5JV08",
+                          "fill": "#6E6A60",
+                          "content": "2023",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 1.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "XRrsX",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Landing page s motion detaily a CMS pro marketingovy tym.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Manrope",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "q6O3K",
+      "x": 1330,
+      "y": 1200,
+      "name": "Mobile CV",
+      "clip": true,
+      "width": 390,
+      "height": 1140,
+      "fill": "#F4EFE6",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        24,
+        24,
+        48,
+        24
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "8o07o",
+          "name": "navM",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Bz1g7",
+              "name": "logo",
+              "width": 40,
+              "height": 40,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "../Downloads/coder-dark.webp",
+                "mode": "fit"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "1fqI4",
+              "name": "burger",
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                0,
+                4,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "s9fDB",
+                  "fill": "#101010",
+                  "width": 22,
+                  "height": 1.5
+                },
+                {
+                  "type": "rectangle",
+                  "id": "Tbp1e",
+                  "fill": "#101010",
+                  "width": 22,
+                  "height": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ev4db",
+          "name": "hero",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 14,
+          "padding": [
+            16,
+            0,
+            12,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "sQXI9",
+              "fill": "#101010",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "CV & dovednosti",
+              "lineHeight": 0.95,
+              "fontFamily": "Poppins",
+              "fontSize": 40,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "FN8Ym",
+              "fill": "#6E6A60",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Strucny prehled vzdelani, praxe a stacku, se kterym dodavam projekty.",
+              "lineHeight": 1.5,
+              "fontFamily": "Manrope",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "5iPCT",
+          "name": "body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 44,
+          "padding": [
+            16,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "pQW38",
+              "name": "exp",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ZX0eD",
+                  "fill": "#A53E22",
+                  "content": "PRAXE",
+                  "fontFamily": "Poppins",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 2.4
+                },
+                {
+                  "type": "frame",
+                  "id": "hVXAZ",
+                  "name": "e1",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    20,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "QaBGe",
+                      "name": "e1Top",
+                      "width": "fill_container",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "EELyj",
+                          "fill": "#101010",
+                          "content": "Globsec",
+                          "fontFamily": "Poppins",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zj6Wh",
+                          "fill": "#6E6A60",
+                          "content": "2023 — DNES",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 1.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "NSmrt",
+                      "fill": "#A53E22",
+                      "content": "Frontend developer",
+                      "fontFamily": "Poppins",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "QQiJH",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Vue SPA aplikace, Laravel integrace, interni CMS komponenty a vykonostni audit.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Manrope",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ru8Vh",
+                  "name": "e2",
+                  "width": "fill_container",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": {
+                      "top": 1,
+                      "bottom": 1
+                    },
+                    "fill": "#C9C2B8"
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    20,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "0gGZm",
+                      "name": "e2Top",
+                      "width": "fill_container",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZQtMS",
+                          "fill": "#101010",
+                          "content": "O2",
+                          "fontFamily": "Poppins",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "vnrcl",
+                          "fill": "#6E6A60",
+                          "content": "2021 — 2023",
+                          "fontFamily": "Poppins",
+                          "fontSize": 11,
+                          "fontWeight": "600",
+                          "letterSpacing": 1.5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "4u2Dj",
+                      "fill": "#A53E22",
+                      "content": "Frontend developer",
+                      "fontFamily": "Poppins",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yxIpx",
+                      "fill": "#6E6A60",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Redesign o2.cz, staticke komponenty a iNetPublish support.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Manrope",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "1RJRH",
+              "name": "stack",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "eRssJ",
+                  "fill": "#A53E22",
+                  "content": "STACK",
+                  "fontFamily": "Poppins",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 2.4
+                },
+                {
+                  "type": "text",
+                  "id": "sTSYf",
+                  "fill": "#101010",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Vue 3 · TypeScript · JS ESNext",
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "sBHsv",
+                  "fill": "#101010",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "SCSS · Tailwind · design systems",
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "UuxKi",
+                  "fill": "#101010",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "SEO · schema.org · Core Web Vitals",
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "cBRp5",
+              "name": "edu",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "IDWKH",
+                  "fill": "#A53E22",
+                  "content": "VZDELANI",
+                  "fontFamily": "Poppins",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 2.4
+                },
+                {
+                  "type": "frame",
+                  "id": "CXW6h",
+                  "name": "eduRow",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "P8I3x",
+                      "fill": "#101010",
+                      "content": "VŠE Praha",
+                      "fontFamily": "Poppins",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g0Sku",
+                      "fill": "#6E6A60",
+                      "content": "2017 — 2020",
+                      "fontFamily": "Poppins",
+                      "fontSize": 11,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.5
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "4gPNv",
+                  "fill": "#6E6A60",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Webove a softwarove inzenyrstvi",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Manrope",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "tMyk4",
+      "x": 1800,
+      "y": 1200,
+      "name": "Mobile Contact",
+      "clip": true,
+      "width": 390,
+      "height": 920,
+      "fill": "#F4EFE6",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        24,
+        24,
+        48,
+        24
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "sWE0C",
+          "name": "navM",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "HSe8c",
+              "name": "logo",
+              "width": 40,
+              "height": 40,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "../Downloads/coder-dark.webp",
+                "mode": "fit"
+              }
+            },
+            {
+              "type": "frame",
+              "id": "WjUOZ",
+              "name": "burger",
+              "layout": "vertical",
+              "gap": 5,
+              "padding": [
+                0,
+                4,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "qCwiE",
+                  "fill": "#101010",
+                  "width": 22,
+                  "height": 1.5
+                },
+                {
+                  "type": "rectangle",
+                  "id": "3wqwY",
+                  "fill": "#101010",
+                  "width": 22,
+                  "height": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GnR5X",
+          "name": "wrap",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            80,
+            0,
+            0,
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "TKOrY",
+              "fill": "#101010",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Mate zajem o spolupraci?",
+              "lineHeight": 0.95,
+              "textAlign": "center",
+              "fontFamily": "Poppins",
+              "fontSize": 42,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "I8qWp",
+              "fill": "#6E6A60",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Napis mi a muzeme probrat projekt i technicke detaily.",
+              "lineHeight": 1.5,
+              "textAlign": "center",
+              "fontFamily": "Manrope",
+              "fontSize": 15,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "lQ7Qi",
+              "name": "mail",
+              "fill": "#A53E22",
+              "padding": [
+                16,
+                28
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bevcv",
+                  "fill": "#F4EFE6",
+                  "content": "info@konecnymichal.cz",
+                  "fontFamily": "Manrope",
+                  "fontSize": 15,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fPItQ",
+              "name": "icons",
+              "gap": 16,
+              "padding": [
+                12,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kSlRi",
+                  "name": "li",
+                  "fill": "#F4EFE600",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#1A1A1A"
+                  },
+                  "padding": [
+                    14,
+                    22
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "l5cv8",
+                      "fill": "#101010",
+                      "content": "LinkedIn",
+                      "fontFamily": "Poppins",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MbK5H",
+                  "name": "gh",
+                  "fill": "#F4EFE600",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#1A1A1A"
+                  },
+                  "padding": [
+                    14,
+                    22
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PcdJw",
+                      "fill": "#101010",
+                      "content": "GitHub",
+                      "fontFamily": "Poppins",
+                      "fontSize": 14,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "f0kbq",
+      "x": 2270,
+      "y": 1200,
+      "name": "Mobile Detail",
+      "clip": true,
+      "width": 390,
+      "height": 920,
+      "fill": "#3A312A",
+      "stroke": {
+        "align": "inside",
+        "thickness": {
+          "top": 4
+        },
+        "fill": "#A53E22"
+      },
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Rt3kE",
+          "name": "topBar",
+          "width": "fill_container",
+          "padding": [
+            22,
+            24
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "FjhT4",
+              "name": "topL",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Uykzu",
+                  "fill": "#F4EFE6",
+                  "content": "←",
+                  "fontFamily": "Manrope",
+                  "fontSize": 18,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Txa2j",
+                  "fill": "#A53E22",
+                  "content": "03 / DETAIL",
+                  "fontFamily": "Poppins",
+                  "fontSize": 11,
+                  "fontWeight": "700",
+                  "letterSpacing": 2.4
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "jzY1K",
+              "fill": "#F4EFE6",
+              "content": "✕",
+              "fontFamily": "Manrope",
+              "fontSize": 18,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "EquE6",
+          "name": "img",
+          "width": "fill_container",
+          "height": 220,
+          "fill": "#4A4038",
+          "layout": "none"
+        },
+        {
+          "type": "frame",
+          "id": "gnlAW",
+          "name": "content",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 18,
+          "padding": 28,
+          "children": [
+            {
+              "type": "text",
+              "id": "JTJft",
+              "fill": "#F4EFE6",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "REST Countries API",
+              "lineHeight": 1,
+              "fontFamily": "Poppins",
+              "fontSize": 34,
+              "fontWeight": "800"
+            },
+            {
+              "type": "text",
+              "id": "8GxdC",
+              "fill": "#9A9A95",
+              "content": "2024 — klientsky projekt",
+              "fontFamily": "Manrope",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "tiCBz",
+              "fill": "#C9C5B6",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Napojeni na verejne REST API. Filtrovani dat na klientovi, optimalizace renderovani seznamu zemi a SSR metadata pro social share. Lighthouse 99/100.",
+              "lineHeight": 1.5,
+              "fontFamily": "Manrope",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "2YP94",
+              "name": "tags",
+              "gap": 8,
+              "padding": [
+                10,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "bUFBw",
+                  "name": "tag1",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#5C5048"
+                  },
+                  "padding": [
+                    9,
+                    13
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wX0Ja",
+                      "fill": "#C9C5B6",
+                      "content": "Vue 3",
+                      "fontFamily": "Poppins",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "d0621",
+                  "name": "tag2",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#5C5048"
+                  },
+                  "padding": [
+                    9,
+                    13
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "i3OmO",
+                      "fill": "#C9C5B6",
+                      "content": "TypeScript",
+                      "fontFamily": "Poppins",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VMpOY",
+                  "name": "tag3",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#5C5048"
+                  },
+                  "padding": [
+                    9,
+                    13
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "hZKb3",
+                      "fill": "#C9C5B6",
+                      "content": "SEO",
+                      "fontFamily": "Poppins",
+                      "fontSize": 12,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "1hT6i",
+              "name": "links",
+              "gap": 12,
+              "padding": [
+                18,
+                0,
+                0,
+                0
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "cpcOF",
+                  "name": "live",
+                  "fill": "#A53E22",
+                  "padding": [
+                    14,
+                    22
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "W724J",
+                      "fill": "#F4EFE6",
+                      "content": "Live demo →",
+                      "fontFamily": "Poppins",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pw8nK",
+                  "name": "repo",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#F4EFE6"
+                  },
+                  "padding": [
+                    14,
+                    22
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XPPBU",
+                      "fill": "#F4EFE6",
+                      "content": "Repo",
+                      "fontFamily": "Poppins",
+                      "fontSize": 14,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "gyZBT",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 836,
+          "name": "navBar",
+          "width": 390,
+          "height": 80,
+          "fill": "#3A312A",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "top": 1
+            },
+            "fill": "#5C5048"
+          },
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "AUMSD",
+              "name": "prevBtn",
+              "width": "fill_container",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "JUIFw",
+                  "fill": "#A53E22",
+                  "content": "↑",
+                  "fontFamily": "Manrope",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "Xl8If",
+                  "name": "prevText",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yI1Cw",
+                      "fill": "#9A9A95",
+                      "content": "PREDCHOZI",
+                      "fontFamily": "Poppins",
+                      "fontSize": 9,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "QCtIw",
+                      "fill": "#F4EFE6",
+                      "content": "CMS portal",
+                      "fontFamily": "Poppins",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "id": "tAyfz",
+              "fill": "#5C5048",
+              "width": 1,
+              "height": 40
+            },
+            {
+              "type": "frame",
+              "id": "iEh9t",
+              "name": "nextBtn",
+              "width": "fill_container",
+              "gap": 12,
+              "justifyContent": "end",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EiVfT",
+                  "name": "nextText",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "9RmDq",
+                      "fill": "#9A9A95",
+                      "content": "DALSI",
+                      "fontFamily": "Poppins",
+                      "fontSize": 9,
+                      "fontWeight": "600",
+                      "letterSpacing": 1.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "0qz2J",
+                      "fill": "#F4EFE6",
+                      "content": "Firemni microsite",
+                      "fontFamily": "Poppins",
+                      "fontSize": 13,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "FVjOT",
+                  "fill": "#A53E22",
+                  "content": "↓",
+                  "fontFamily": "Manrope",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

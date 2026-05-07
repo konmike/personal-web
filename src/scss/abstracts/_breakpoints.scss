@@ -1,18 +1,7 @@
-$breakpoints: (
-  //min-width
-  desktop: 64em,
-  //max-width
-  // tablet: 68.125em,
-  mobile: 40em
-);
+$bp-mobile: 768px;
 
-@mixin mq($key) {
-  $size: map-get(
-    $map: $breakpoints,
-    $key: $key,
-  );
-
-  @media only screen and (min-width: $size) {
+@mixin mobile {
+  @media (max-width: #{$bp-mobile}) {
     @content;
   }
 }

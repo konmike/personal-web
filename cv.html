@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV Michala Konečného — praxe, tech stack, vzdělání.">
+  <meta property="og:title" content="CV — Michal Konečný">
+  <meta property="og:type" content="website">
+  <title>CV — Michal Konečný</title>
+  <link rel="icon" href="/favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  <link rel="stylesheet" href="/src/scss/main.scss">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header>
+      <nav class="site-nav" aria-label="Hlavní navigace">
+        <a href="/" class="site-nav__logo" aria-label="Domů">
+          <img src="/img/coder-dark.webp" alt="Michal Konečný" width="36" height="36">
+        </a>
+        <ul class="site-nav__links" role="list">
+          <li><a href="/">Projekty</a></li>
+          <li><a href="/cv.html" aria-current="page">CV</a></li>
+          <li><a href="/contact.html">Kontakt</a></li>
+        </ul>
+        <button
+          class="site-nav__hamburger"
+          id="menu-toggle"
+          aria-label="Otevřít menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+    <div class="hairline" aria-hidden="true"></div>
+
+    <main class="site-content page-cv">
+      <section class="hero">
+        <h1>CV &amp; dovednosti</h1>
+        <p>Stručný přehled vzdělání, praxe a stacku, se kterým pracuji na projektech.</p>
+      </section>
+
+      <div class="cv-body">
+        <div class="cv-column cv-column--main">
+          <section aria-labelledby="praxe-heading">
+            <h2 class="cv-section-title" id="praxe-heading">Praxe</h2>
+
+            <article class="cv-job">
+              <div class="cv-job__header">
+                <span class="cv-job__company">
+                  <a href="https://websta.cz" target="_blank" rel="noopener">Websta Solutions</a>
+                </span>
+                <span class="cv-job__period">květen 2023&nbsp;&ndash;&nbsp;dosud</span>
+              </div>
+              <p class="cv-job__role">Frontend developer</p>
+              <p class="cv-job__desc">
+                Vue SPA napojené na Laravel REST API, interní CMS komponenty a výkonnostní audit.
+              </p>
+            </article>
+
+            <article class="cv-job">
+              <div class="cv-job__header">
+                <span class="cv-job__company">
+                  <a href="https://www.o2.cz" target="_blank" rel="noopener">Etnetera Core</a>
+                </span>
+                <span class="cv-job__period">září 2022&nbsp;&ndash;&nbsp;duben 2023</span>
+              </div>
+              <p class="cv-job__role">Frontend developer</p>
+              <p class="cv-job__desc">
+                Redesign o2.cz, statické komponenty a jNetPublish support.
+              </p>
+            </article>
+
+            <article class="cv-job">
+              <div class="cv-job__header">
+                <span class="cv-job__company">
+                  <a href="https://www.prf.cuni.cz" target="_blank" rel="noopener">Právnická fakulta UK</a>
+                </span>
+                <span class="cv-job__period">říjen 2019&nbsp;&ndash;&nbsp;srpen 2022</span>
+              </div>
+              <p class="cv-job__role">Webmaster</p>
+              <p class="cv-job__desc">
+                Správa webu prf.cuni.cz v Drupal 7/8/9 a WordPress, vývoj automatizačních aplikací a microsites.
+              </p>
+            </article>
+
+            <p class="cv-references">Reference na vyžádání.</p>
+          </section>
+
+          <section class="cv-hobbies-section" aria-labelledby="zaliby-heading">
+            <h2 class="cv-section-title" id="zaliby-heading">Mimo práci</h2>
+            <p class="cv-hobbies">
+              YouTube kanál <a href="https://youtube.com/@srdcechvaly" target="_blank" rel="noopener">srdcechvaly</a> s titulky ke křesťanským klipům, četba, sport.
+            </p>
+          </section>
+        </div>
+
+        <div class="cv-column cv-column--side">
+          <section aria-labelledby="stack-heading">
+            <h2 class="cv-section-title" id="stack-heading">Stack</h2>
+            <div class="cv-stack">
+              <p>Vue 3 &middot; Nuxt &middot; TypeScript &middot; Node.js &middot; REST API</p>
+              <p>SCSS &middot; Tailwind &middot; Blade &middot; Twig &middot; design systems</p>
+              <p>SEO &middot; schema.org &middot; Core Web Vitals</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="vzdelani-heading" style="margin-top: 44px;">
+            <h2 class="cv-section-title" id="vzdelani-heading">Vzdělání</h2>
+            <div class="cv-education">
+              <article class="cv-education__item">
+                <h3>ČVUT FIT</h3>
+                <span>Bc. 2020</span>
+                <p>Webové a softwarové inženýrství</p>
+              </article>
+              <article class="cv-education__item">
+                <h3>Všeobecné gymnázium</h3>
+                <span>matur. 2015</span>
+                <p></p>
+              </article>
+            </div>
+          </section>
+
+          <section aria-labelledby="osobni-heading" style="margin-top: 44px;">
+            <h2 class="cv-section-title" id="osobni-heading">Osobní</h2>
+            <div class="cv-stack">
+              <p>Narozen 1995</p>
+              <p>Angličtina&nbsp;&ndash;&nbsp;technická dokumentace</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobilní menu">
+    <div class="mobile-menu__top">
+      <a href="/" class="logo" aria-label="Domů">
+        <img src="/img/coder-white.webp" alt="Michal Konečný" width="36" height="36">
+      </a>
+      <button id="menu-close" aria-label="Zavřít menu">&times;</button>
+    </div>
+    <ul class="mobile-menu__links" role="list">
+      <li><a href="/">Projekty</a></li>
+      <li><a href="/cv.html" aria-current="page">CV</a></li>
+      <li><a href="/contact.html">Kontakt</a></li>
+    </ul>
+  </div>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

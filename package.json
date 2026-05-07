@@ -1,40 +1,14 @@
 {
   "name": "konecnymichal",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "watch": "vite build --watch"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "animejs": "^3.2.2",
-    "aos": "^2.3.4",
-    "axios": "^0.24.0",
-    "core-js": "^3.6.5",
-    "mitt": "^3.0.0",
-    "puppeteer": "^13.0.1",
-    "vue": "^3.3.11",
-    "vue-router": "^4.2.5"
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/node": "^20.2.3",
-    "@vitejs/plugin-vue": "^4.6.0",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.0.0",
-    "prettier": "^2.2.1",
     "sass": "^1.69.5",
-    "sass-loader": "^8.0.2",
     "vite": "^5.0.10"
   }
 }

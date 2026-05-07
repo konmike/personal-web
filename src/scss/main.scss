@@ -1,3 +1,33 @@
-@use "base";
-@use "components";
-@use "pages";
+@use 'abstracts';
+@use 'base';
+@use 'components';
+@use 'pages';
+
+// Layout wrapper
+.site-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  transition: padding-right 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: rgba(244, 239, 230, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  margin: 0 calc(-1 * var(--pad-x));
+  padding: 0 var(--pad-x);
+}
+
+.site-content {
+  transition: padding-right 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Active nav link
+.site-nav__links a[aria-current='page'] {
+  color: var(--text);
+  font-weight: 700;
+}
