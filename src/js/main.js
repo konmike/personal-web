@@ -29,12 +29,16 @@ function renderProjectList() {
   list.innerHTML = projects.map((p) => `
     <li class="project-list__item" role="listitem">
       <button class="project-list__left" data-project="${p.slug}" aria-haspopup="dialog">
-        <span class="project-list__name">${p.title}</span>
+        <span class="project-list__heading">
+          <span class="project-list__name">${p.title}</span>
+          <span class="project-list__badges" aria-hidden="true">
+            ${p.tech.slice(0, 3).map((t) => `<span class="project-list__badge">${t}</span>`).join('')}
+          </span>
+        </span>
         <span class="project-list__desc">${p.description}</span>
       </button>
       <div class="project-list__meta" aria-hidden="true">
         <span class="project-list__year">${p.year}</span>
-        <span class="project-list__tech">${p.tech.slice(0, 2).join(' / ')}</span>
       </div>
     </li>
   `).join('');

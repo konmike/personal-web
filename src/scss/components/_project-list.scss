@@ -6,22 +6,23 @@
   &__item {
     display: grid;
     grid-template-columns: 1fr auto;
-    align-items: baseline;
+    align-items: start;
     gap: 16px;
     padding: 20px 0;
     border-top: 1px solid var(--hairline);
     cursor: pointer;
-    transition: opacity 180ms ease;
+    transition:
+      border-top-color 180ms ease,
+      opacity 180ms ease;
 
     &:hover,
+    &:focus-within,
     &.is-active {
+      border-top-color: var(--accent);
+
       .project-list__name {
         color: var(--accent);
       }
-    }
-
-    &.is-active {
-      border-top-color: var(--accent);
     }
   }
 
@@ -38,12 +39,41 @@
     width: 100%;
   }
 
+  &__heading {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+
   &__name {
     font-size: clamp(1.125rem, 2.5vw, 1.5rem);
     font-weight: 700;
     letter-spacing: -0.01em;
     transition: color 180ms ease;
-    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 3px 8px;
+    border: 1px solid color-mix(in srgb, var(--accent) 36%, transparent);
+    border-radius: 4px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1;
+    color: color-mix(in srgb, var(--accent) 72%, var(--text));
+    background: color-mix(in srgb, var(--accent) 11%, transparent);
   }
 
   &__desc {
@@ -65,11 +95,6 @@
   }
 
   &__year {
-    font-size: 0.75rem;
-    color: var(--muted);
-  }
-
-  &__tech {
     font-size: 0.75rem;
     color: var(--muted);
   }

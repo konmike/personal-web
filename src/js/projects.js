@@ -60,6 +60,16 @@ export const projects = [
     demo: 'https://www.o2.cz',
   },
   {
+    slug: 'prf-cuni',
+    title: 'prf.cuni.cz',
+    year: '2019–2022',
+    kind: 'webmastering a vývoj',
+    tech: ['Drupal', 'Twig', 'SCSS', 'JavaScript'],
+    description:
+      'Rozvoj a správa webu Právnické fakulty UK, včetně úprav a rozšiřování šablony, tvorby komponent, práce s Drupalem a Twigem a podpory redakčního provozu. Nepravidelná spolupráce na drobných úpravách probíhá dosud.',
+    demo: 'https://prf.cuni.cz',
+  },
+  {
     slug: 'podcast-pf',
     title: 'Podcast PRF UK',
     year: '2022',
